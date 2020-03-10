@@ -88,15 +88,11 @@ cask "keepassx"
 cask "little-snitch"
 cask "macpass"
 cask "megacmd"
-cask "microsoft-office"
 cask "microsoft-teams"
-<<<<<<< HEAD
 cask "minikube"
 cask "minishift"
 cask "nagstamon"
-=======
 cask "microsoft-office"
->>>>>>> cff9db0aeab7bf65613fe3577777737aeb4a9699
 cask "platypus"
 cask "podman"
 cask "rambox"
@@ -126,10 +122,6 @@ mas "Irvue", id: 1039633667
 mas "Keynote", id: 409183694
 mas "LanScan", id: 472226235
 mas "Magnet", id: 441258766
-<<<<<<< HEAD
-mas "Microsoft Remote Desktop", id: 1295203466
-=======
->>>>>>> cff9db0aeab7bf65613fe3577777737aeb4a9699
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "PDFScanner", id: 410968114
