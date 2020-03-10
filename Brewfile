@@ -108,7 +108,6 @@ cask "virtualbox"
 cask "virtualbox-extension-pack"
 cask "vlc"
 cask "vmware-fusion"
-cask "vmware-remote-console"
 cask "vscodium"
 mas "Affinity Photo", id: 824183456
 mas "Apple Configurator 2", id: 1037126344
@@ -131,3 +130,4 @@ mas "Reeder", id: 880001334
 mas "Sid Meier's Railroads!", id: 536502825
 mas "SQLPro for SQLite", id: 586001240
 mas "Todoist", id: 585829637
+mas "VMware Remote Console", id: 1230249825
