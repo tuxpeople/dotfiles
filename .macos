@@ -655,6 +655,8 @@ Various
 # Toggle Safari DNS Prefetching
 defaults write com.apple.safari WebKitDNSPrefetchingEnabled -boolean false
 
+# Show Bluetooth and TimeMachine in menubar
+defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
 
 ###############################################################################
 # Kill affected applications                                                  #
@@ -685,3 +687,4 @@ for app in "Activity Monitor" \
 	killall "${app}" &> /dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
+
