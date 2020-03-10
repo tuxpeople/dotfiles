@@ -101,11 +101,11 @@ cask "keepassx"
 cask "little-snitch"
 cask "macpass"
 cask "megacmd"
+cask "microsoft-office"
 cask "microsoft-teams"
 cask "minikube"
 cask "minishift"
 cask "nagstamon"
-cask "onedrive"
 cask "platypus"
 cask "podman"
 cask "rambox"
@@ -140,12 +140,7 @@ mas "Irvue", id: 1039633667
 mas "Keynote", id: 409183694
 mas "LanScan", id: 472226235
 mas "Magnet", id: 441258766
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft OneNote", id: 784801555
-mas "Microsoft Outlook", id: 985367838
-mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Remote Desktop", id: 1295203466
-mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541
