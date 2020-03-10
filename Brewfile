@@ -4,7 +4,8 @@ tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
-cask "adoptopenjdk", no-quarantine: true
+cask_args "no-quarantine": true
+cask "adoptopenjdk"
 brew "sqlite"
 brew "ansible"
 brew "arping"
