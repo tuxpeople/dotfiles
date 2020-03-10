@@ -1,4 +1,4 @@
 cd ~/git/dotfiles
-source bootstrap.sh
 ./brew.sh
+source bootstrap.sh
 ./.macos
