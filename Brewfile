@@ -37,14 +37,12 @@ brew "links"
 brew "lynx"
 brew "mas"
 brew "midnight-commander"
-brew "minikube", link: false
 brew "moreutils"
 brew "mosh"
 brew "mtr"
 brew "ncdu"
 brew "nmap"
 brew "openshift-cli"
-brew "openssh"
 brew "p7zip"
 brew "pinentry-mac"
 brew "pv"
@@ -76,6 +74,7 @@ cask "balenaetcher"
 cask "bbedit"
 cask "dbeaver-community"
 cask "docker"
+cask "dropbox"
 cask "dosbox"
 cask "firefox"
 cask "font-bahnschrift"
@@ -126,6 +125,7 @@ mas "Magnet", id: 441258766
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "PDFScanner", id: 410968114
+mas "Playgrounds", id: 1496833156
 mas "Proxie", id: 897814548
 mas "Reeder", id: 880001334
 mas "Sid Meier's Railroads!", id: 536502825
