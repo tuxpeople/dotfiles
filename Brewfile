@@ -37,6 +37,7 @@ brew "links"
 brew "lynx"
 brew "mas"
 brew "midnight-commander"
+brew "minikube"
 brew "moreutils"
 brew "mosh"
 brew "mtr"
@@ -55,7 +56,6 @@ brew "sipcalc"
 brew "speedtest-cli"
 brew "ssh-copy-id"
 brew "sshfs"
-brew "sshpass"
 brew "sysdig"
 brew "tcptraceroute"
 brew "telnet"
@@ -90,7 +90,6 @@ cask "little-snitch"
 cask "macpass"
 cask "megacmd"
 cask "microsoft-teams"
-cask "minikube"
 cask "minishift"
 cask "nextcloud"
 cask "microsoft-office"
@@ -112,7 +111,7 @@ cask "vscodium"
 mas "Affinity Photo", id: 824183456
 mas "Apple Configurator 2", id: 1037126344
 mas "Bear", id: 1091189122
-mas "BwanaDik", id: 876923947
+#mas "BwanaDik", id: 876923947
 mas "DaisyDisk", id: 411643860
 mas "ForkLift", id: 412448059
 mas "FruitJuice", id: 671736912
