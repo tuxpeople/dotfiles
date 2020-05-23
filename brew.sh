@@ -13,6 +13,7 @@ brew update
 
 # Upgrade any already-installed formulae.
 brew upgrade
+brew cask upgrade
 
 # Save Homebrew’s installed location.
 BREW_PREFIX=$(brew --prefix)
@@ -26,3 +27,4 @@ ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 
 # Remove outdated versions from the cellar.
 brew cleanup
+brew cleanup --prune-prefix
