@@ -28,3 +28,6 @@ ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 # Remove outdated versions from the cellar.
 brew cleanup
 brew cleanup --prune-prefix
+
+# check if more is installed than it should
+brew bundle cleanup
