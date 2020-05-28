@@ -22,7 +22,6 @@ brew "cowsay"
 brew "csshx"
 brew "curl"
 brew "dialog"
-brew "docker-compose", link: false
 brew "dosbox"
 brew "exif"
 brew "exiftool"
