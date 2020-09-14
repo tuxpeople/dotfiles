@@ -7,7 +7,7 @@ tap "homebrew/core"
 cask_args "no-quarantine": true
 cask "adoptopenjdk"
 cask "osxfuse"
-brew "http://git.io/sshpass.rb"
+#brew "http://git.io/sshpass.rb"
 brew "sqlite"
 brew "ansible"
 brew "arping"
