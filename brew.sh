@@ -13,7 +13,7 @@ brew update
 
 # Upgrade any already-installed formulae.
 brew upgrade
-brew cask upgrade
+brew upgrade --cask
 
 # Save Homebrew’s installed location.
 BREW_PREFIX=$(brew --prefix)
