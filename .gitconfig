@@ -43,6 +43,8 @@
   log = true
 [web]
   browser = google-chrome
+[gpg]
+  program = gpg2
 [credential]
   helper = osxkeychain
 [push]
