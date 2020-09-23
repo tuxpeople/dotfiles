@@ -47,6 +47,8 @@
   helper = osxkeychain
 [push]
   default = simple
+[pull]
+  rebase = false
 [merge]
   tool = kdiff3
 [difftool]
