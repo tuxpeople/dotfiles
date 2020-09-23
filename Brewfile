@@ -197,6 +197,7 @@ mas "Reeder", id: 1449412482
 mas "Sid Meier's Railroads!", id: 536502825
 mas "SQLPro for SQLite", id: 586001240
 mas "Todoist", id: 585829637
+mas "Unibox", id: 702816521
 mas "VMware Remote Console", id: 1230249825
 mas "Microsoft To Do", id: 1274495053
 mas "Swift Playgrounds", id: 1496833156
