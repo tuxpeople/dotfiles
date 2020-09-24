@@ -44,7 +44,7 @@
 [web]
   browser = google-chrome
 [gpg]
-  program = gpg2
+	program = gpg2
 [credential]
   helper = osxkeychain
 [push]
