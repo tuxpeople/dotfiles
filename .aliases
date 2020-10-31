@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Container based tools
+alias doc="docker run -it tdeutsch/openshift-cli /app/oc"
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
