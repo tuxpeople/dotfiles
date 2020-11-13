@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# https://serverfault.com/a/927760
+# hurryup root "10.10.0.3"
+function hurryup () {
+    until ssh -o ConnectTimeout=2 "$1"@"$2"
+        do sleep 1
+    done
+}
+
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "$@" && cd "$_";
