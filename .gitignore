@@ -13,3 +13,6 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 workbench.action.closeOtherEditors
+
+# Brewfile lock
+Brewfile.lock.json
