@@ -7,7 +7,6 @@ tap "homebrew/core"
 cask_args "no-quarantine": true
 cask "adoptopenjdk"
 cask "osxfuse"
-#brew "ansible"
 #brew "http://git.io/sshpass.rb"
 #cask "seafile-client"
 #cask "synology-drive"
