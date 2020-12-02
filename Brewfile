@@ -205,7 +205,7 @@ mas "PDFScanner", id: 410968114
 mas "Pages", id: 409201541
 mas "Playgrounds", id: 1496833156
 mas "Proxie", id: 897814548
-mas "Reeder", id: 1449412482
+mas "Reeder 5", id: 1529448980
 mas "SQLPro for SQLite", id: 586001240
 mas "Sid Meier's Railroads!", id: 536502825
 mas "Swift Playgrounds", id: 1496833156
