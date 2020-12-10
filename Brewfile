@@ -5,7 +5,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 cask_args "no-quarantine": true
-cask "adoptopenjdk"
+cask "adoptopenjdk8"
 cask "osxfuse"
 #brew "http://git.io/sshpass.rb"
 #cask "seafile-client"
