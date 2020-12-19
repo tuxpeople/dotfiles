@@ -23,7 +23,10 @@ brew bundle install
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
+ln -s -f "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
+
+# Set python to python3
+ln -s -f /usr/local/bin/python3 /usr/local/bin/python
 
 # Remove outdated versions from the cellar.
 brew cleanup
