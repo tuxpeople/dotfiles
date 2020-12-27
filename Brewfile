@@ -157,7 +157,8 @@ cask "ganttproject"
 cask "google-chrome"
 cask "gpg-suite"
 cask "handbrake"
-cask "hazel"
+#cask "hazel"
+caske "tuxpeople-hazel"
 cask "iterm2"
 cask "jdownloader"
 cask "keepassx"
@@ -188,7 +189,7 @@ cask "virtualbox-extension-pack"
 cask "vlc"
 cask "vmware-fusion"
 cask "vscodium"
-cask "zoomus"
+#cask "zoomus"
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Affinity Publisher", id: 881418622
