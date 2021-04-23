@@ -1,5 +1,8 @@
 # Add `~/bin` and my Nextcloud bin to the `$PATH`
-export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$HOME/bin:$PATH:~/iCloudDrive/Allgemein/bin/:/usr/local/sbin";
+export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$HOME/bin:$PATH:~/iCloudDrive/Allgemein/bin/:/usr/local/sbin:${HOME}/.krew/bin";
+
+#. <(flux completion bash)
+#. <(kubectl completion bash)
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
