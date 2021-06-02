@@ -1,6 +1,7 @@
 [user]
   name = Thomas Deutsch
   email = thomas@tuxpeople.org
+	signingkey = 9BF3AFB540B69B4F7D5D05EFE31E4AB295E4270C
 [core]
   editor = vi
   excludesfile = ~/.gitignore
@@ -28,7 +29,7 @@
   untracked = cyan
 [commit]
   # https://help.github.com/articles/signing-commits-using-gpg/
-  gpgsign = true
+	gpgsign = true
 [diff]
   # Detect copies as well as renames
   renames = copies
@@ -44,7 +45,7 @@
 [web]
   browser = google-chrome
 [gpg]
-	program = gpg2
+	program = /usr/local/bin/gpg
 [credential]
   helper = osxkeychain
 [push]
@@ -56,7 +57,7 @@
 [difftool]
   prompt = false
 [alias]
-  c = commit
+	c = commit
   ca = commit -a
   cm = commit -m
   cam = commit -am
