@@ -16,6 +16,7 @@ cask "adoptopenjdk8"
 #cask "synology-drive"
 #mas "BwanaDik", id: 876923947
 #brew "ansible"
+brew "ansible-lint"
 brew "arping"
 brew "atomicparsley"
 brew "azure-cli"
