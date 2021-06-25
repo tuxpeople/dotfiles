@@ -30,9 +30,6 @@ brew "csshx"
 brew "curl"
 brew "dialog"
 brew "dockutil"
-brew "dosbox"
-brew "exif"
-brew "exiftool"
 brew "ffmpeg"
 brew "findutils"
 brew "fping"
@@ -69,8 +66,6 @@ brew "kubernetes-cli"
 brew "kubeseal"
 brew "krew"
 brew "kustomize"
-brew "k3d"
-brew "k3sup"
 brew "k9s"
 brew "lastpass-cli"
 brew "lazygit"
@@ -141,8 +136,6 @@ brew "tcptrace"
 brew "tcptraceroute"
 brew "telnet"
 brew "tfenv"
-brew "terraform"
-brew "terraform-ls"
 brew "tinc"
 brew "tmux"
 brew "trash"
@@ -165,20 +158,17 @@ brew "youtube-dl"
 brew "zopfli"
 cask "1password"
 cask "aerial"
-cask "arduino"
 cask "authy"
 cask "balenaetcher"
 cask "bbedit"
-cask "blender"
 cask "dbeaver-community"
+cask "displaylink"
 cask "docker"
-cask "dosbox"
 cask "drawio"
 cask "dropbox"
 cask "firefox"
 #cask "font-bahnschrift"
 cask "fedora-media-writer"
-cask "freecad"
 cask "font-roboto"
 cask "font-roboto-mono"
 #cask "forticlient-vpn"
@@ -188,24 +178,19 @@ cask "gpg-suite"
 cask "handbrake"
 cask "hazel"
 cask "iterm2"
-cask "jdownloader"
 cask "keepassx"
 cask "kubenav"
 cask "lastpass"
 cask "little-snitch"
 cask "macpass"
-cask "megacmd"
-cask "meshmixer"
 cask "multipass"
 cask "minishift"
 cask "microsoft-office"
 cask "microsoft-teams"
 cask "mysides"
 #cask "nextcloud"
-cask "openscad"
 cask "platypus"
 cask "pocket-casts"
-cask "prusaslicer"
 cask "rambox"
 cask "raspberry-pi-imager"
 cask "royal-tsx"
@@ -214,10 +199,7 @@ cask "skype-for-business"
 cask "slack"
 cask "spotify"
 cask "teamviewer"
-cask "tiptoi-manager"
-cask "tunnelblick"
 cask "tuxpeople-font-bs"
-cask "ultimaker-cura"
 cask "unetbootin"
 cask "vagrant"
 cask "virtualbox"
@@ -235,22 +217,20 @@ mas "Bear", id: 1091189122
 mas "DaisyDisk", id: 411643860
 mas "ForkLift", id: 412448059
 mas "FruitJuice", id: 671736912
-mas "Grand Theft Auto Vice City", id: 424719511
 mas "Irvue", id: 1039633667
 mas "Keynote", id: 409183694
 mas "LanScan", id: 472226235
 mas "Magnet", id: 441258766
-mas "Microsoft To Do", id: 1274495053
+#mas "Microsoft To Do", id: 1274495053
 mas "Numbers", id: 409203825
 mas "OneDrive", id: 823766827
 mas "PDFScanner", id: 410968114
 mas "Pages", id: 409201541
-mas "Playgrounds", id: 1496833156
+#mas "Playgrounds", id: 1496833156
 mas "Proxie", id: 897814548
 mas "Reeder 5", id: 1529448980
 mas "SQLPro for SQLite", id: 586001240
-mas "Sid Meier's Railroads!", id: 536502825
-mas "Swift Playgrounds", id: 1496833156
+#mas "Swift Playgrounds", id: 1496833156
 mas "Todoist", id: 585829637
 mas "Unibox", id: 702816521
 mas "VMware Remote Console", id: 1230249825
