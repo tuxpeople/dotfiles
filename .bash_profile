@@ -1,6 +1,7 @@
 # Add `~/bin` and my Nextcloud bin to the `$PATH`
 export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$HOME/bin:$PATH:~/iCloudDrive/Allgemein/bin/:/usr/local/sbin:${HOME}/.krew/bin";
 export GPG_TTY=$(tty)
+export HASTE_SERVER=https://paste.eighty-three.me
 
 #. <(flux completion bash)
 #. <(kubectl completion bash)
