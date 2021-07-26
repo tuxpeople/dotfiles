@@ -1,10 +1,10 @@
 [user]
-  name = Thomas Deutsch
-  email = thomas@tuxpeople.org
+	name = Thomas Deutsch
+	email = thomas@tuxpeople.org
 	signingkey = 9BF3AFB540B69B4F7D5D05EFE31E4AB295E4270C
 [core]
   editor = vi
-  excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore
   autocrlf = input
 [apply]
   # Detect whitespace errors when applying a patch
@@ -30,6 +30,7 @@
 [commit]
   # https://help.github.com/articles/signing-commits-using-gpg/
 	gpgsign = true
+	template = /Users/thomas.deutsch/.stCommitMsg
 [diff]
   # Detect copies as well as renames
   renames = copies
@@ -64,3 +65,9 @@
   d = diff
   dc = diff --cached
   l = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
