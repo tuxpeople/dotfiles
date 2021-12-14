@@ -8,6 +8,11 @@ function hurryup () {
     done
 }
 
+function emptydns () {
+	sudo killall -HUP mDNSResponder
+	sleep 2
+} 
+
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "$@" && cd "$_";
