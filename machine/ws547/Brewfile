@@ -1,29 +1,18 @@
+tap "devopyio/yamlfmt"
+tap "fluxcd/tap"
+tap "go-task/tap"
+tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
-tap "tuxpeople/personal"
-tap "fluxcd/tap"
-tap "hashicorp/tap"
-tap "nrlquaker/createzap"
 tap "johanhaleby/kubetail"
-tap "devopyio/yamlfmt"
 tap "mfuentesg/tap"
-tap "go-task/tap"
-tap "aquasecurity/trivy"
-tap "utkuozdemir/pv-migrate"
-tap "benwebber/tunnelblickctl"
 tap "norwoodj/tap"
-cask_args "no-quarantine": true
-cask "adoptopenjdk8"
-#cask "osxfuse"
-#brew "http://git.io/sshpass.rb"
-#cask "seafile-client"
-#cask "synology-drive"
-#mas "BwanaDik", id: 876923947
-#brew "ansible"
+tap "nrlquaker/createzap"
+tap "tuxpeople/personal"
 brew "arping"
 brew "atomicparsley"
 brew "azure-cli"
@@ -36,28 +25,26 @@ brew "cilium-cli"
 brew "coreutils"
 brew "cowsay"
 brew "csshx"
+brew "rtmpdump"
 brew "curl"
 brew "dialog"
 brew "dockutil"
 brew "ffmpeg"
 brew "findutils"
 brew "fping"
-brew "fluxcd/tap/flux"
+brew "gh"
 brew "git"
 brew "git-cola"
 brew "git-flow"
 brew "gnu-barcode"
 brew "gnu-getopt"
 brew "gnu-sed"
+brew "gnu-tar"
 brew "gnupg"
 brew "gnuplot"
 brew "go"
-brew "go-task"
-brew "gpg2"
 brew "grep"
 brew "grsync"
-brew "gh"
-brew "gnu-tar"
 brew "gzip"
 brew "hadolint"
 brew "haste-client"
@@ -66,26 +53,24 @@ brew "htop"
 brew "httperf"
 brew "httpie"
 brew "httrack"
+brew "imapsync"
 brew "iperf"
 brew "iperf3"
-brew "imapsync"
 brew "jq"
 brew "jsonpp"
-brew "kind"
-brew "keychain"
-brew "kompose"
-brew "kubernetes-cli"
-brew "kubeseal"
-brew "kubetail"
-brew "krew"
-brew "ksd"
-brew "kustomize"
 brew "k3d"
 brew "k9s"
+brew "keychain"
+brew "kind"
+brew "kompose"
+brew "krew"
+brew "kubeseal"
+brew "kustomize"
 brew "lazygit"
 brew "lcdf-typetools"
 brew "lft"
 brew "lftp"
+brew "lima"
 brew "links"
 brew "lolcat"
 brew "lsof"
@@ -94,7 +79,6 @@ brew "m-cli"
 brew "mas"
 brew "memtester"
 brew "minio-mc"
-brew "minikube"
 brew "mmv"
 brew "moreutils"
 brew "mosh"
@@ -111,8 +95,8 @@ brew "ngrep"
 brew "nmap"
 brew "nuttcp"
 brew "openshift-cli"
-brew "packer"
 brew "p7zip"
+brew "packer"
 brew "pdftohtml"
 brew "pidof"
 brew "pigz"
@@ -131,18 +115,14 @@ brew "ren"
 brew "rename"
 brew "rsnapshot"
 brew "rsync"
-brew "rtmpdump"
 brew "screen"
 brew "shellcheck"
 brew "sipcalc"
 brew "sops"
 brew "speedtest-cli"
-brew "sqlite"
 brew "ssh-copy-id", link: true
-#brew "sshfs"
 brew "ssldump"
 brew "sslscan"
-brew "svn"
 brew "sysdig"
 brew "tcpdump"
 brew "tcpflow"
@@ -156,7 +136,6 @@ brew "tinc"
 brew "tmux"
 brew "trash"
 brew "tree"
-brew "unrar"
 brew "unrtf"
 brew "unzip"
 brew "vagrant-completion"
@@ -170,12 +149,19 @@ brew "wifi-password"
 brew "wput"
 brew "xhyve"
 brew "yamllint"
-brew "yamlfmt"
-brew "yq"
 brew "youtube-dl"
+brew "yq"
 brew "zopfli"
+brew "devopyio/yamlfmt/yamlfmt"
+brew "fluxcd/tap/flux"
+brew "go-task/tap/go-task"
+brew "johanhaleby/kubetail/kubetail"
+brew "mfuentesg/tap/ksd"
+brew "norwoodj/tap/helm-docs"
+brew "tuxpeople/personal/unrar"
 cask "1password"
 cask "1password-cli"
+cask "adoptopenjdk8"
 cask "aerial"
 cask "authy"
 cask "balenaetcher"
@@ -185,12 +171,10 @@ cask "displaylink"
 cask "docker"
 cask "drawio"
 cask "dropbox"
-cask "firefox"
-#cask "font-bahnschrift"
 cask "fedora-media-writer"
+cask "firefox"
 cask "font-roboto"
 cask "font-roboto-mono"
-#cask "forticlient-vpn"
 cask "ganttproject"
 cask "google-chrome"
 cask "gpg-suite"
@@ -201,13 +185,11 @@ cask "keepassx"
 cask "kubenav"
 cask "little-snitch"
 cask "macpass"
-cask "multipass"
-cask "minishift"
 cask "microsoft-office"
 cask "microsoft-teams"
+cask "multipass"
 cask "mysides"
 cask "namechanger"
-#cask "nextcloud"
 cask "platypus"
 cask "pocket-casts"
 cask "pycharm-ce"
@@ -228,32 +210,40 @@ cask "visual-studio-code"
 cask "vlc"
 cask "vmware-fusion"
 cask "wireshark"
-#cask "zoomus"
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Affinity Publisher", id: 881418622
 mas "Apple Configurator 2", id: 1037126344
 mas "Bear", id: 1091189122
+mas "BwanaDik", id: 876923947
 mas "DaisyDisk", id: 411643860
 mas "ForkLift", id: 412448059
 mas "FruitJuice", id: 671736912
+mas "GarageBand", id: 682658836
+mas "GoodNotes", id: 1444383602
+mas "iMovie", id: 408981434
 mas "Irvue", id: 1039633667
 mas "Keynote", id: 409183694
 mas "LanScan", id: 472226235
+mas "Lightweight PDF", id: 1450640351
 mas "Magnet", id: 441258766
-#mas "Microsoft To Do", id: 1274495053
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft OneNote", id: 784801555
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "Microsoft To Do", id: 1274495053
+mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "OneDrive", id: 823766827
-mas "PDFScanner", id: 410968114
 mas "Pages", id: 409201541
-#mas "Playgrounds", id: 1496833156
+mas "PDFScanner", id: 410968114
+mas "Playgrounds", id: 1496833156
 mas "Proxie", id: 897814548
-mas "Reeder 5", id: 1529448980
+mas "Reeder", id: 1529448980
 mas "SQLPro for SQLite", id: 586001240
-#mas "Swift Playgrounds", id: 1496833156
+mas "Termius", id: 1176074088
 mas "Todoist", id: 585829637
 mas "Unibox", id: 702816521
 mas "VMware Remote Console", id: 1230249825
-mas "iMovie", id: 408981434
-mas "GoodNotes 5", id: 1444383602
-mas "Microsoft To Do", id: 1274495053
+mas "WireGuard", id: 1451685025
