@@ -64,7 +64,6 @@ brew "keychain"
 brew "kind"
 brew "kompose"
 brew "krew"
-brew "kubeseal"
 brew "kustomize"
 brew "lazygit"
 brew "lcdf-typetools"
@@ -215,11 +214,9 @@ mas "Affinity Photo", id: 824183456
 mas "Affinity Publisher", id: 881418622
 mas "Apple Configurator 2", id: 1037126344
 mas "Bear", id: 1091189122
-mas "BwanaDik", id: 876923947
 mas "DaisyDisk", id: 411643860
 mas "ForkLift", id: 412448059
 mas "FruitJuice", id: 671736912
-mas "GarageBand", id: 682658836
 mas "GoodNotes", id: 1444383602
 mas "iMovie", id: 408981434
 mas "Irvue", id: 1039633667
@@ -227,13 +224,8 @@ mas "Keynote", id: 409183694
 mas "LanScan", id: 472226235
 mas "Lightweight PDF", id: 1450640351
 mas "Magnet", id: 441258766
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft OneNote", id: 784801555
-mas "Microsoft Outlook", id: 985367838
-mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Microsoft To Do", id: 1274495053
-mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541

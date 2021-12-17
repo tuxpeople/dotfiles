@@ -48,7 +48,7 @@ brew "gnu-barcode"
 brew "gnu-getopt"
 brew "gnu-sed"
 brew "gnu-tar"
-brew "gnupg", link: true
+brew "gnupg"
 brew "gnuplot"
 brew "go"
 brew "grep"
@@ -76,12 +76,12 @@ brew "kind"
 brew "kompose"
 brew "kubernetes-cli"
 brew "krew"
-brew "kubeseal"
 brew "kustomize"
 brew "lazygit"
 brew "lcdf-typetools"
 brew "lft"
 brew "lftp"
+brew "lima"
 brew "links"
 brew "lolcat"
 brew "lsof"
@@ -250,6 +250,7 @@ mas "iMovie", id: 408981434
 mas "Irvue", id: 1039633667
 mas "Keynote", id: 409183694
 mas "LanScan", id: 472226235
+mas "Lightweight PDF", id: 1450640351
 mas "Magnet", id: 441258766
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Microsoft To Do", id: 1274495053
@@ -262,6 +263,7 @@ mas "Proxie", id: 897814548
 mas "Reeder", id: 1529448980
 mas "Sid Meier's Railroads!", id: 536502825
 mas "SQLPro for SQLite", id: 586001240
+mas "Termius", id: 1176074088
 mas "Todoist", id: 585829637
 mas "Unibox", id: 702816521
 mas "VMware Remote Console", id: 1230249825
