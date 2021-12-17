@@ -184,7 +184,6 @@ cask "keepassx"
 cask "kubenav"
 cask "little-snitch"
 cask "macpass"
-cask "microsoft-office"
 cask "microsoft-teams"
 cask "multipass"
 cask "mysides"
@@ -224,8 +223,13 @@ mas "Keynote", id: 409183694
 mas "LanScan", id: 472226235
 mas "Lightweight PDF", id: 1450640351
 mas "Magnet", id: 441258766
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft OneNote", id: 784801555
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Microsoft To Do", id: 1274495053
+mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541
