@@ -27,7 +27,7 @@ brew "bcrypt"
 brew "butane"
 brew "cdrtools"
 brew "cilium-cli"
-brew "coreutils", link: true
+brew "coreutils"
 brew "cowsay"
 brew "csshx"
 brew "rtmpdump"
