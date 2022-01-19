@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# https://github.com/toptal/haste-server/issues/142#issuecomment-264856341
+haste() { a=$(cat); curl -X POST -s -d "$a" https://paste.eighty-three.me/documents | awk -F '"' '{print "https://paste.eighty-three.me/"$4}'; }
+
 # https://serverfault.com/a/927760
 # hurryup root "10.10.0.3"
 function hurryup () {
