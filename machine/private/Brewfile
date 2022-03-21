@@ -199,7 +199,7 @@ cask "firefox"
 cask "font-roboto"
 cask "font-roboto-mono"
 cask "freecad"
-#has 4040 cask "ganttproject"
+cask "ganttproject"
 cask "google-chrome"
 cask "gpg-suite"
 cask "handbrake"
@@ -210,7 +210,7 @@ cask "keepassx"
 cask "kubenav"
 cask "little-snitch"
 cask "macpass"
-# cask "meshmixer"     Error: Cask 'meshmixer' is unavailable: No Cask with this name exists.
+cask "meshmixer"
 cask "multipass"
 cask "mysides"
 cask "namechanger"
@@ -229,6 +229,8 @@ cask "tiptoi-manager"
 cask "ultimaker-cura"
 cask "unetbootin"
 cask "vagrant"
+#cask "virtualbox"
+#cask "virtualbox-extension-pack"
 cask "visual-studio-code"
 cask "vlc"
 cask "wireshark"
@@ -264,5 +266,3 @@ mas "Termius", id: 1176074088
 mas "Todoist", id: 585829637
 mas "Unibox", id: 702816521
 mas "VMware Remote Console", id: 1230249825
-
-main ./Brewfile.$OSTYPE.$PLATFORM
