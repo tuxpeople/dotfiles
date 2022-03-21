@@ -56,7 +56,6 @@ brew "grep"
 brew "grsync"
 brew "gzip"
 brew "hadolint"
-brew "haste-client"
 brew "helm"
 brew "htop"
 brew "httperf"
@@ -210,9 +209,7 @@ cask "keepassx"
 cask "kubenav"
 cask "little-snitch"
 cask "macpass"
-cask "megacmd"
 cask "meshmixer"
-cask "microsoft-teams"
 cask "multipass"
 cask "mysides"
 cask "namechanger"
@@ -220,16 +217,13 @@ cask "openscad"
 cask "platypus"
 cask "pocket-casts"
 cask "prusaslicer"
-cask "pycharm-ce"
 cask "rambox-ce"
 cask "raspberry-pi-imager"
 cask "royal-tsx"
 cask "sequel-pro"
-cask "slack"
 cask "spotify"
 cask "teamviewer"
 cask "tiptoi-manager"
-cask "tunnelblick"
 cask "tuxpeople-font-bs"
 cask "ultimaker-cura"
 cask "unetbootin"
@@ -238,11 +232,11 @@ cask "virtualbox"
 cask "virtualbox-extension-pack"
 cask "visual-studio-code"
 cask "vlc"
-cask "vmware-fusion"
 cask "wireshark"
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Affinity Publisher", id: 881418622
+mas "agenda", id: 1287445660
 mas "Apple Configurator 2", id: 1037126344
 mas "Bear", id: 1091189122
 mas "DaisyDisk", id: 411643860
@@ -257,10 +251,6 @@ mas "Lightweight PDF", id: 1450640351
 mas "Magnet", id: 441258766
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft OneNote", id: 784801555
-mas "Microsoft Outlook", id: 985367838
-mas "Microsoft PowerPoint", id: 462062816
-mas "Microsoft Remote Desktop", id: 1295203466
-mas "Microsoft To Do", id: 1274495053
 mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "OneDrive", id: 823766827

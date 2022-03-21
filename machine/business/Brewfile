@@ -206,8 +206,6 @@ cask "tunnelblick"
 cask "tuxpeople-font-bs"
 cask "unetbootin"
 cask "vagrant"
-cask "virtualbox"
-cask "virtualbox-extension-pack"
 cask "visual-studio-code"
 cask "vlc"
 cask "vmware-fusion"
@@ -215,6 +213,7 @@ cask "wireshark"
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Affinity Publisher", id: 881418622
+mas "agenda", id: 1287445660
 mas "Apple Configurator 2", id: 1037126344
 mas "Bear", id: 1091189122
 mas "DaisyDisk", id: 411643860
