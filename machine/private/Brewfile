@@ -138,6 +138,7 @@ brew "ssldump"
 brew "sslscan"
 brew "step"
 brew "subfinder"
+brew "svn" # needed for some casks to be installed
 brew "sysdig"
 brew "tcpdump"
 brew "tcpflow"

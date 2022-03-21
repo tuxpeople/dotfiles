@@ -126,6 +126,7 @@ brew "speedtest-cli"
 brew "ssh-copy-id", link: true
 brew "ssldump"
 brew "sslscan"
+brew "svn" # needed for some casks to be installed
 brew "sysdig"
 brew "tcpdump"
 brew "tcpflow"
