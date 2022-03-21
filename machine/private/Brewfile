@@ -265,4 +265,4 @@ mas "Todoist", id: 585829637
 mas "Unibox", id: 702816521
 mas "VMware Remote Console", id: 1230249825
 
-main Brewfile.$PLATFORM
+main ./Brewfile.$OSTYPE.$PLATFORM
