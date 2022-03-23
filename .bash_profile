@@ -1,7 +1,14 @@
 # Add `~/bin` and my Nextcloud bin to the `$PATH`
-export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$HOME/bin:$PATH:~/iCloudDrive/Allgemein/bin/:/usr/local/sbin:${HOME}/.krew/bin:/opt/homebrew/bin:/usr/local/bin";
+export PATH="$HOME/bin:~/iCloudDrive/Allgemein/bin/:${HOME}/.krew/bin:$PATH";
 export GPG_TTY=$(tty)
 export HASTE_SERVER=https://paste.eighty-three.me
+
+# Homebrew path
+if [ "$(uname -m)" == "arm64" ]; then
+	export PATH="$PATH:/opt/homebrew/sbin:/opt/homebrew/bin"
+else
+	export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH:/usr/local/sbin:/usr/local/bin"
+fi
 
 #. <(flux completion bash)
 #. <(kubectl completion bash)
