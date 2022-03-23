@@ -65,6 +65,9 @@
   d = diff
   dc = diff --cached
   l = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
+	# Remove branches that have already been merged with main
+ 	# a.k.a. ‘delete merged’
+ 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
