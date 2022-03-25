@@ -170,7 +170,7 @@ cask "authy"
 cask "balenaetcher"
 cask "bbedit"
 cask "dbeaver-community"
-cask "displaylink"
+# cask "displaylink" # is now in MDM
 cask "docker"
 cask "drawio"
 cask "dropbox"
