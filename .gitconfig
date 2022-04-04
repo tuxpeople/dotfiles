@@ -75,4 +75,4 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [init]
- 	templateDir = ~/.config/git/template/
+ 	templateDir = ~/.git_config/template/
