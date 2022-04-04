@@ -184,6 +184,7 @@ cask "gpg-suite" # Tools to protect your emails and files
 cask "handbrake" # 
 cask "hazel" # Automated organization
 cask "iterm2" # Terminal emulator as alternative to Apple's Terminal app
+cask "joplin" # Note taking and to-do application with synchronization capabilities
 cask "keepassx" # Personal data manager focusing on security
 cask "kubenav" # Navigator for your Kubernetes clusters right in your pocket
 cask "little-snitch" # Host-based application firewall
