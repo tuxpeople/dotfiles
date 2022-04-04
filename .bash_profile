@@ -10,7 +10,7 @@ else
 	export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH:/usr/local/sbin:/usr/local/bin"
 fi
 
-PATH="$(python3 -m site --user-base)/bin:$PATH"
+PATH="$(/Library/Developer/CommandLineTools/usr/bin/python3.8 -m site --user-base)/bin:$PATH"
 
 #. <(flux completion bash)
 #. <(kubectl completion bash)
