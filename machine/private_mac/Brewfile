@@ -258,7 +258,7 @@ mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541
 mas "PDFScanner", id: 410968114
 mas "Playgrounds", id: 1496833156
-mas "Proxie", id: 897814548
+#mas "Proxie", id: 897814548
 mas "Reeder", id: 1529448980
 mas "Sid Meier's Railroads!", id: 536502825
 mas "SQLPro for SQLite", id: 586001240
