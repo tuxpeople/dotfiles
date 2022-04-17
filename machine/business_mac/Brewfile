@@ -161,7 +161,7 @@ brew "go-task/tap/go-task" # Task runner / simpler Make alternative written in G
 brew "johanhaleby/kubetail/kubetail" # Tail logs from multiple Kubernetes pods at the same time
 brew "mfuentesg/tap/ksd" # ksd` is a tool, whose aim is help you to visualize in text plain your kubernetes secrets, either `yaml` or `json` outputs.
 brew "norwoodj/tap/helm-docs" # Automatically generate markdown documentation for helm charts
-brew "tuxpeople/personal/unrar" # Extract, view, and test RAR archives
+# 404 brew "tuxpeople/personal/unrar" # Extract, view, and test RAR archives
 cask "1password" # Password manager that keeps all passwords secure behind one password
 cask "1password-cli" # Command-line helper for the 1Password password manager
 cask "adoptopenjdk8" # Prebuilt OpenJDK binaries
