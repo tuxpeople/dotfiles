@@ -196,7 +196,7 @@ cask "namechanger" # Rename a list of files quickly
 cask "platypus" # 
 cask "pocket-casts" # Podcast platform
 cask "pycharm-ce" # IDE for Python programming - Community Edition
-cask "rambox-ce" # Free and Open Source messaging and emailing app
+cask "rambox" # Free and Open Source messaging and emailing app
 cask "raspberry-pi-imager" # Imaging utility to install operating systems to a microSD card
 cask "royal-tsx" # Remote management solution
 cask "sequel-pro" # MySQL/MariaDB database management platform
