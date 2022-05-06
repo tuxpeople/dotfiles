@@ -178,6 +178,7 @@ cask "fedora-media-writer" # Tool to write Fedora images to portable media files
 cask "firefox" # Web browser
 cask "font-roboto" # Font with a mechanical skeleton and the forms are largely geometric
 cask "font-roboto-mono" # null
+cask "forticlient-vpn"# Free VPN client for FortiClient
 #has 404 cask "ganttproject" # Gantt chart and project management application
 cask "google-chrome" # Web browser
 cask "gpg-suite" # Tools to protect your emails and files
@@ -200,6 +201,7 @@ cask "rambox" # Free and Open Source messaging and emailing app
 cask "raspberry-pi-imager" # Imaging utility to install operating systems to a microSD card
 cask "royal-tsx" # Remote management solution
 cask "sequel-pro" # MySQL/MariaDB database management platform
+cask "skype-for-business" # Microsofts instant messaging enterprise software
 cask "slack" # Team communication and collaboration software
 cask "spotify" # Music streaming service
 cask "teamviewer" # Remote access and connectivity software focused on security
