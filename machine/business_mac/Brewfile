@@ -194,6 +194,7 @@ cask "microsoft-teams" # Meet, chat, call, and collaborate in just one place
 cask "multipass" # Orchestrates virtual Ubuntu instances
 cask "mysides" # null
 cask "namechanger" # Rename a list of files quickly
+cask "netspot" # WiFi site survey software and WiFi scanner
 cask "platypus" # 
 cask "pocket-casts" # Podcast platform
 cask "pycharm-ce" # IDE for Python programming - Community Edition
