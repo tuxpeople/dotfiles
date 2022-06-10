@@ -234,6 +234,7 @@ cask "vagrant"
 cask "visual-studio-code"
 cask "vlc"
 cask "wireshark"
+mas "1Password for Safari", id: 1569813296
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Affinity Publisher", id: 881418622
