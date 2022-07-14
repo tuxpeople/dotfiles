@@ -91,6 +91,7 @@ brew "mydumper" # How MySQL DBA & support engineer would imagine 'mysqldump' ;-)
 brew "mytop" # Top-like query monitor for MySQL
 brew "ncdu" # NCurses Disk Usage
 brew "ncftp" # FTP client with an advanced user interface
+brew "nerdctl" # ContaiNERD CTL - Docker-compatible CLI for containerd
 brew "netcat" # Utility for managing network connections
 brew "ngrep" # Network grep
 brew "nmap" # Port scanning utility for large networks
@@ -171,7 +172,6 @@ cask "balenaetcher" # Tool to flash OS images to SD cards & USB drives
 cask "bbedit" # Text, code, and markup editor
 cask "dbeaver-community" # Universal database tool and SQL client
 # cask "displaylink" # is now in MDM # Drivers for DisplayLink docks, adapters and monitors
-cask "docker" # 
 cask "drawio" # Draw.io is free online diagram software
 cask "dropbox" # Client for the Dropbox cloud storage service
 cask "fedora-media-writer" # Tool to write Fedora images to portable media files
