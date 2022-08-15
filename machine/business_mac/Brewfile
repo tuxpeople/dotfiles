@@ -202,7 +202,6 @@ cask "rambox" # Free and Open Source messaging and emailing app
 cask "raspberry-pi-imager" # Imaging utility to install operating systems to a microSD card
 cask "royal-tsx" # Remote management solution
 cask "sequel-pro" # MySQL/MariaDB database management platform
-cask "skype-for-business" # Microsofts instant messaging enterprise software
 cask "slack" # Team communication and collaboration software
 cask "spotify" # Music streaming service
 cask "teamviewer" # Remote access and connectivity software focused on security
