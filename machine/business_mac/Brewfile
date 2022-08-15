@@ -189,6 +189,7 @@ cask "joplin" # Note taking and to-do application with synchronization capabilit
 cask "keepassx" # Personal data manager focusing on security
 cask "kubenav" # Navigator for your Kubernetes clusters right in your pocket
 cask "little-snitch" # Host-based application firewall
+cask "logseq" # Privacy-first, open-source platform for knowledge sharing and management
 cask "macpass" # Open-source, KeePass-client and password manager
 cask "microsoft-teams" # Meet, chat, call, and collaborate in just one place
 cask "multipass" # Orchestrates virtual Ubuntu instances

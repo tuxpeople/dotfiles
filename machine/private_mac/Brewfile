@@ -209,6 +209,7 @@ cask "joplin"
 cask "keepassx"
 cask "kubenav"
 cask "little-snitch"
+cask "logseq"
 cask "macpass"
 # cask "meshmixer"     Error: Cask 'meshmixer' is unavailable: No Cask with this name exists.
 cask "multipass"
