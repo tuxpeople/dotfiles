@@ -271,6 +271,7 @@ mas "Unibox", id: 702816521
 mas "VMware Remote Console", id: 1230249825
 
 cask "obsidian" # Knowledge base that works on top of a local folder of plain text Markdown files
+cask "rar" # Archive manager for data compression and backups
 
 brew "age" # Simple, modern, secure file encryption
 brew "direnv" # Load/unload environment variables based on $PWD
@@ -287,4 +288,3 @@ brew "gawk" # GNU awk utility
 brew "gem-optparse" # /opt/homebrew/Cellar/gem-optparse/0.2.0 (77 files, 190.6KB) *
 brew "ipcalc" # Calculate various network masks, etc. from a given IP address
 brew "terraform-docs" # Tool to generate documentation from Terraform modules
-brew "tuxpeople/personal/unrar" # Extract, view, and test RAR archives

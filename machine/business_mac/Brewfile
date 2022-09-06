@@ -257,6 +257,7 @@ cask "microsoft-auto-update" # Provides updates to various Microsoft products
 cask "obsidian" # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "vmware-horizon-client" # Virtual machine client
 cask "webex-meetings" # Video communication and virtual meeting platform
+cask "rar" # Archive manager for data compression and backups
 
 
 brew "age" # Simple, modern, secure file encryption
@@ -270,4 +271,3 @@ brew "cosign" # Container Signing
 brew "gawk" # GNU awk utility
 brew "ipcalc" # Calculate various network masks, etc. from a given IP address
 brew "terraform-docs" # Tool to generate documentation from Terraform modules
-brew "tuxpeople/personal/unrar" # Extract, view, and test RAR archives
