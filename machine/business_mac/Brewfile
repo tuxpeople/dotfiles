@@ -251,3 +251,23 @@ mas "Todoist", id: 585829637
 mas "Unibox", id: 702816521
 mas "VMware Remote Console", id: 1230249825
 mas "WireGuard", id: 1451685025
+
+
+cask "microsoft-auto-update" # Provides updates to various Microsoft products
+cask "obsidian" # Knowledge base that works on top of a local folder of plain text Markdown files
+cask "vmware-horizon-client" # Virtual machine client
+cask "webex-meetings" # Video communication and virtual meeting platform
+
+
+brew "age" # Simple, modern, secure file encryption
+brew "direnv" # Load/unload environment variables based on $PWD
+brew "gitleaks" # Audit git repos for secrets
+brew "tfsec" # Static analysis security scanner for your terraform code
+brew "oci-cli" # Oracle Cloud Infrastructure CLI
+brew "stern" # Tail multiple Kubernetes pods & their containers
+brew "trivy" # Vulnerability scanner for container images, file systems, and Git repos
+brew "cosign" # Container Signing
+brew "gawk" # GNU awk utility
+brew "ipcalc" # Calculate various network masks, etc. from a given IP address
+brew "terraform-docs" # Tool to generate documentation from Terraform modules
+brew "tuxpeople/personal/unrar" # Extract, view, and test RAR archives

@@ -269,3 +269,22 @@ mas "Termius", id: 1176074088
 mas "Todoist", id: 585829637
 mas "Unibox", id: 702816521
 mas "VMware Remote Console", id: 1230249825
+
+cask "obsidian" # Knowledge base that works on top of a local folder of plain text Markdown files
+
+brew "age" # Simple, modern, secure file encryption
+brew "direnv" # Load/unload environment variables based on $PWD
+brew "gem-clipboard" # /opt/homebrew/Cellar/gem-clipboard/1.3.6 (23 files, 44.7KB) *
+brew "gitleaks" # Audit git repos for secrets
+brew "tfsec" # Static analysis security scanner for your terraform code
+brew "brew-gem" # Install RubyGems as Homebrew formulae
+brew "gem-colorize" # /opt/homebrew/Cellar/gem-colorize/0.8.1 (14 files, 59.5KB) *
+brew "oci-cli" # Oracle Cloud Infrastructure CLI
+brew "stern" # Tail multiple Kubernetes pods & their containers
+brew "trivy" # Vulnerability scanner for container images, file systems, and Git repos
+brew "cosign" # Container Signing
+brew "gawk" # GNU awk utility
+brew "gem-optparse" # /opt/homebrew/Cellar/gem-optparse/0.2.0 (77 files, 190.6KB) *
+brew "ipcalc" # Calculate various network masks, etc. from a given IP address
+brew "terraform-docs" # Tool to generate documentation from Terraform modules
+brew "tuxpeople/personal/unrar" # Extract, view, and test RAR archives
