@@ -1,7 +1,7 @@
 [user]
 	name = Thomas Deutsch
 	email = thomas@tuxpeople.org
-	signingkey = 9BF3AFB540B69B4F7D5D05EFE31E4AB295E4270C
+	signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC6kw80yMMmWqECBt+5J9La2Q4tOzZ87v2qn6swVJZOgV+jE7ZkiHPBGOvCio6ntIdcftTwqrE3MuSsh/GJDjtV9xXvOp6gq+YW00xV0+NVrjVg17njFDIGn5R3zGuQndaG15ZvDdoTQTEJ7c95UzSGubBc56kKcspKMcTePCmNXGKkfE6bb0Tm4EFQLA6AkNjnVmWbGM7qHyS0H4p2VyYe1kH6ilebn1g41vttLM/cKLwKnmwr9KZG8LKd7VoKPrPMC94bsuUqxpXSTj/HLQreNlnmdRDNIRRLF3/vl9xHS6JvMpN2h8XUEdcmHjkhSvOFK4Ud9/fncQRIwm8/lFpzpTJ+xz43toPaM/TQxrG+QCHIqlZzMfVZtCXveOIKQaCOoqioGLun+KVxi2OMkHHtiOm66VaGUddbkvysUgpVPsNQLP5wRLU3BBUZnJs0dLLWDLp6I1/05+m3TaSEa9VBeOkiC+FarzU7AwXhngbNo72RZiwRyshlDGGFup+PKa0vWOT5EAE3xQgCqiIytBPMGGQ0TOqHhx/dNVrT3ihunsU4iKV3lDn/IPK22vkKMe7T+rjq7CZXfi/qGc1W0FtKfq8jHuy6t2E9T9OjqG0QCbMPmYcq+5smpnoQ6PwdcIxdNrFv5g84u+1WtGEznEECwxszghUnoazBc/vKESkcuQ==
 [core]
   editor = vi
 	excludesfile = ~/.gitignore
@@ -154,6 +154,7 @@
   browser = google-chrome
 [gpg]
 	program = /usr/local/MacGPG2/bin/gpg
+	format = ssh
 [credential]
   helper = osxkeychain
 [push]
@@ -214,3 +215,5 @@
 	default = simple
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
