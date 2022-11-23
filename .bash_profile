@@ -1,17 +1,19 @@
-# Add `~/bin` and my Nextcloud bin to the `$PATH`
-export PATH="$HOME/bin:~/iCloudDrive/Allgemein/bin/:${HOME}/.krew/bin:$PATH";
 export GPG_TTY=$(tty)
 export HASTE_SERVER=https://paste.eighty-three.me
 export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
 
 # Homebrew path
 if [ "$(uname -m)" == "arm64" ]; then
-	export PATH="$PATH:/opt/homebrew/sbin:/opt/homebrew/bin"
+	export PATH="/opt/homebrew/sbin:/opt/homebrew/bin:$PATH"
 else
-	export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH:/usr/local/sbin:/usr/local/bin"
+	export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/sbin:/usr/local/bin:$PATH"
 fi
 
-PATH="$(/Library/Developer/CommandLineTools/usr/bin/python3 -m site --user-base)/bin:$PATH"
+# Add python dir to the path
+export PATH="$(/Library/Developer/CommandLineTools/usr/bin/python3 -m site --user-base)/bin:$PATH"
+
+# Add `~/bin`, my iCloud Drive bin and krew to the `$PATH`
+export PATH="$HOME/bin:~/iCloudDrive/Allgemein/bin/:${HOME}/.krew/bin:$PATH";
 
 #eval "$(keychain --eval --ignore-missing --quiet --inherit any $(ls -1 ${HOME}/.ssh/id* | grep -v ".pub" | xargs -L1 basename | tr '\n' ' '))"
 #eval "$(keychain --eval --ignore-missing --quiet --inherit any /Users/tdeutsch/.ssh/id_rsa)"

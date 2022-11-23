@@ -19,7 +19,7 @@ brew "atomicparsley" # MPEG-4 command-line tool
 brew "azure-cli" # Microsoft Azure CLI 2.0
 brew "base64" # Encode and decode base64 files
 brew "bash" # Bourne-Again SHell, a UNIX command interpreter
-brew "bash-completion" # Programmable completion for Bash 3.2
+brew "bash-completion@2" # Programmable completion for Bash 3.2
 brew "bat" # Clone of cat(1) with syntax highlighting and Git integration
 brew "bcrypt" # Cross platform file encryption utility using blowfish
 brew "cilium-cli" # CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
