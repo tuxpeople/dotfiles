@@ -288,3 +288,5 @@ brew "gawk" # GNU awk utility
 # brew "gem-optparse" # /opt/homebrew/Cellar/gem-optparse/0.2.0 (77 files, 190.6KB) *
 brew "ipcalc" # Calculate various network masks, etc. from a given IP address
 brew "terraform-docs" # Tool to generate documentation from Terraform modules
+
+brew "poppler" # PDF rendering library (based on the xpdf-3.0 code base)

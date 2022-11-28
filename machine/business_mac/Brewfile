@@ -271,3 +271,5 @@ brew "cosign" # Container Signing
 brew "gawk" # GNU awk utility
 brew "ipcalc" # Calculate various network masks, etc. from a given IP address
 brew "terraform-docs" # Tool to generate documentation from Terraform modules
+
+brew "poppler" # PDF rendering library (based on the xpdf-3.0 code base)
