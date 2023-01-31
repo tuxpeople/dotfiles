@@ -99,7 +99,7 @@ brew "nuttcp" # Network performance measurement tool
 brew "openshift-cli" # OpenShift command-line interface tools
 brew "p7zip" # 7-Zip (high compression file archiver) implementation
 brew "packer" # Tool for creating identical machine images for multiple platforms
-brew "pdftohtml" # Utility which converts PDF files into HTML and XML formats
+# brew "pdftohtml" # Utility which converts PDF files into HTML and XML formats
 brew "pidof" # Display the PID number for a given process name
 brew "pigz" # Parallel gzip
 brew "pinentry-mac" # Pinentry for GPG on Mac
