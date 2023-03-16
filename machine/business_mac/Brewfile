@@ -171,7 +171,8 @@ cask "authy" # Two-factor authentication software
 cask "balenaetcher" # Tool to flash OS images to SD cards & USB drives
 cask "bbedit" # Text, code, and markup editor
 cask "dbeaver-community" # Universal database tool and SQL client
-# cask "displaylink" # is now in MDM # Drivers for DisplayLink docks, adapters and monitors
+cask "displaylink" # Drivers for DisplayLink docks, adapters and monitors
+cask "displaylink-login-extension" # DisplayLink Login Screen Extension
 cask "drawio" # Draw.io is free online diagram software
 cask "dropbox" # Client for the Dropbox cloud storage service
 cask "fedora-media-writer" # Tool to write Fedora images to portable media files
