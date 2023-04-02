@@ -175,7 +175,7 @@ cask "displaylink" # Drivers for DisplayLink docks, adapters and monitors
 cask "displaylink-login-extension" # DisplayLink Login Screen Extension
 cask "drawio" # Draw.io is free online diagram software
 cask "dropbox" # Client for the Dropbox cloud storage service
-cask "fedora-media-writer" # Tool to write Fedora images to portable media files
+#has 404 cask "fedora-media-writer" # Tool to write Fedora images to portable media files
 cask "firefox" # Web browser
 cask "font-roboto" # Font with a mechanical skeleton and the forms are largely geometric
 cask "font-roboto-mono" # null
