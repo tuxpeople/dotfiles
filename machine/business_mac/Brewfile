@@ -87,7 +87,6 @@ brew "mtr" # 'traceroute' and 'ping' in a single tool
 brew "multitail" # Tail multiple files in one terminal simultaneously
 brew "mycli" # CLI for MySQL with auto-completion and syntax highlighting
 brew "mydumper" # How MySQL DBA & support engineer would imagine 'mysqldump' ;-)
-brew "mytop" # Top-like query monitor for MySQL
 brew "ncdu" # NCurses Disk Usage
 brew "ncftp" # FTP client with an advanced user interface
 brew "nerdctl" # ContaiNERD CTL - Docker-compatible CLI for containerd
@@ -150,7 +149,6 @@ brew "wget" # Internet file retriever
 brew "whois" # Lookup tool for domain names and other internet resources
 brew "wifi-password" # Show the current WiFi network password
 brew "wput" # Tiny, wget-like FTP client for uploading files
-brew "xhyve" # Lightweight macOS virtualization solution based on FreeBSD's bhyve
 brew "yamllint" # Linter for YAML files
 brew "yt-dlp" # Fork of youtube-dl with additional features and fixes
 brew "yq" # Process YAML documents from the CLI
