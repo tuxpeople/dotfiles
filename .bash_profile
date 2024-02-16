@@ -13,7 +13,7 @@ fi
 export PATH="$(/usr/local/bin/python3 -m site --user-base)/bin:$PATH"
 
 # Add `~/bin`, my iCloud Drive bin and krew to the `$PATH`
-export PATH="$HOME/bin:~/iCloudDrive/Allgemein/bin/:${HOME}/.krew/bin:$PATH";
+export PATH="$HOME/bin:$HOME/iCloudDrive/Allgemein/bin/:${HOME}/.krew/bin:$PATH";
 
 #eval "$(keychain --eval --ignore-missing --quiet --inherit any $(ls -1 ${HOME}/.ssh/id* | grep -v ".pub" | xargs -L1 basename | tr '\n' ' '))"
 #eval "$(keychain --eval --ignore-missing --quiet --inherit any /Users/tdeutsch/.ssh/id_rsa)"
