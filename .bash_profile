@@ -10,7 +10,14 @@ else
 fi
 
 # Add python dir to the path
-export PATH="$(/usr/local/bin/python3 -m site --user-base)/bin:$PATH"
+if [ -f /usr/local/bin/python3 ]; then
+  MYPYTHON="/usr/local/bin/python3"
+else if [ -f /opt/homebrew/bin/python3 ]; then
+  MYPYTHON="/opt/homebrew/bin/python3"
+else
+  MYPYTHON="/Library/Developer/CommandLineTools/usr/bin/python3"
+fi
+export PATH="$(${MYPYTHON} -m site --user-base)/bin:$PATH"
 
 # Add `~/bin`, my iCloud Drive bin and krew to the `$PATH`
 export PATH="$HOME/bin:$HOME/iCloudDrive/Allgemein/bin/:${HOME}/.krew/bin:$PATH";
