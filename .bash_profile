@@ -11,11 +11,11 @@ fi
 
 # Add python dir to the path
 if [ -f /usr/local/bin/python3 ]; then
-  MYPYTHON="/usr/local/bin/python3"
-else if [ -f /opt/homebrew/bin/python3 ]; then
-  MYPYTHON="/opt/homebrew/bin/python3"
+	MYPYTHON="/usr/local/bin/python3"
+elif [ -f /opt/homebrew/bin/python3 ]; then
+	MYPYTHON="/opt/homebrew/bin/python3"
 else
-  MYPYTHON="/Library/Developer/CommandLineTools/usr/bin/python3"
+	MYPYTHON="/Library/Developer/CommandLineTools/usr/bin/python3"
 fi
 export PATH="$(${MYPYTHON} -m site --user-base)/bin:$PATH"
 
