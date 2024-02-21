@@ -4,20 +4,24 @@ export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
 
 # Homebrew path
 if [ "$(uname -m)" == "arm64" ]; then
-	export PATH="/opt/homebrew/sbin:/opt/homebrew/bin:$PATH"
+	eval "$(/opt/homebrew/bin/brew shellenv)"
 else
 	export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/sbin:/usr/local/bin:$PATH"
 fi
 
-# Add python dir to the path
-if [ -f /usr/local/bin/python3 ]; then
-	MYPYTHON="/usr/local/bin/python3"
-elif [ -f /opt/homebrew/bin/python3 ]; then
-	MYPYTHON="/opt/homebrew/bin/python3"
-else
-	MYPYTHON="/Library/Developer/CommandLineTools/usr/bin/python3"
+# # Add python dir to the path
+# if [ -f /usr/local/bin/python3 ]; then
+# 	MYPYTHON="/usr/local/bin/python3"
+# elif [ -f /opt/homebrew/bin/python3 ]; then
+# 	MYPYTHON="/opt/homebrew/bin/python3"
+# else
+# 	MYPYTHON="/Library/Developer/CommandLineTools/usr/bin/python3"
+# fi
+# export PATH="$(${MYPYTHON} -m site --user-base)/bin:$PATH"
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
 fi
-export PATH="$(${MYPYTHON} -m site --user-base)/bin:$PATH"
 
 # Add `~/bin`, my iCloud Drive bin and krew to the `$PATH`
 export PATH="$HOME/bin:$HOME/iCloudDrive/Allgemein/bin/:${HOME}/.krew/bin:$PATH";
