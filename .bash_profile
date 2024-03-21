@@ -2,6 +2,9 @@ export GPG_TTY=$(tty)
 export HASTE_SERVER=https://paste.eighty-three.me
 export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
 
+eval "$(direnv hook bash)"
+
+
 # Homebrew path
 if [ "$(uname -m)" == "arm64" ]; then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
