@@ -2,9 +2,6 @@ export GPG_TTY=$(tty)
 export HASTE_SERVER=https://paste.eighty-three.me
 export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
 
-eval "$(direnv hook bash)"
-
-
 # Homebrew path
 if [ "$(uname -m)" == "arm64" ]; then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -21,6 +18,8 @@ fi
 # 	MYPYTHON="/Library/Developer/CommandLineTools/usr/bin/python3"
 # fi
 # export PATH="$(${MYPYTHON} -m site --user-base)/bin:$PATH"
+
+eval "$(direnv hook bash)"
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
