@@ -302,6 +302,8 @@ brew "tcpflow"
 brew "tcping"
 # Active TCP connections monitoring tool
 brew "tcpstat"
+# Analyze tcpdump output
+brew "tcptrace"
 # Traceroute implementation using TCP packets
 brew "tcptraceroute"
 # User interface to the TELNET protocol
@@ -455,12 +457,12 @@ cask "raspberry-pi-imager"
 cask "royal-tsx"
 # Tool for sending personal documents to Kindles from Macs
 cask "send-to-kindle"
-# MySQL/MariaDB database management platform
-cask "sequel-pro"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service
 cask "spotify"
+# Native GUI tool for relational databases
+cask "tableplus"
 # Mesh VPN based on WireGuard
 cask "tailscale"
 # Remote access and connectivity software focused on security
