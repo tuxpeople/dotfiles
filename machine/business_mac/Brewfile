@@ -6,8 +6,6 @@ tap "gabrie30/utils"
 tap "go-task/tap"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
 tap "homebrew/services"
 tap "johanhaleby/kubetail"
 tap "mfuentesg/tap"
@@ -44,8 +42,6 @@ brew "clusterctl"
 brew "coreutils"
 # Container Signing
 brew "cosign"
-# Configurable talking characters in ASCII art
-brew "cowsay"
 # Cluster ssh tool for Terminal.app
 brew "csshx"
 # Tool for downloading RTMP streaming media
@@ -82,8 +78,6 @@ brew "git-cola"
 brew "git-flow"
 # Audit git repos for secrets
 brew "gitleaks"
-# GitOps support for Kubernetes
-brew "gitops"
 # Convert text strings to printed bars
 brew "gnu-barcode"
 # Command-line option parsing utility
@@ -308,8 +302,6 @@ brew "tcpflow"
 brew "tcping"
 # Active TCP connections monitoring tool
 brew "tcpstat"
-# Analyze tcpdump output
-brew "tcptrace"
 # Traceroute implementation using TCP packets
 brew "tcptraceroute"
 # User interface to the TELNET protocol
@@ -334,8 +326,6 @@ brew "trivy"
 brew "unrtf"
 # Extraction utility for .zip compressed archives
 brew "unzip"
-# Bash completion for Vagrant
-brew "vagrant-completion"
 # Creates fully functional virtual k8s cluster inside host k8s cluster's namespace
 brew "vcluster"
 # Disaster recovery for Kubernetes resources and persistent volumes
@@ -390,8 +380,6 @@ cask "1password-cli"
 cask "adoptopenjdk8"
 # Apple TV Aerial screensaver
 cask "aerial"
-# Two-factor authentication software
-cask "authy"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
 # Text, code, and markup editor
@@ -430,8 +418,6 @@ cask "iterm2"
 cask "joplin"
 # Personal data manager focusing on security
 cask "keepassx"
-# Navigator for your Kubernetes clusters right in your pocket
-cask "kubenav"
 # Host-based application firewall
 cask "little-snitch"
 # Software for Logitech devices
@@ -499,8 +485,6 @@ cask "vmware-horizon-client"
 cask "webex-meetings"
 # Network protocol analyzer
 cask "wireshark"
-# HTML to PDF renderer
-cask "wkhtmltopdf"
 # Application for configuring any YubiKey
 cask "yubico-yubikey-manager"
 mas "1Password for Safari", id: 1569813296
@@ -520,6 +504,7 @@ mas "iMovie", id: 408981434
 mas "Irvue", id: 1039633667
 mas "Keynote", id: 409183694
 mas "Kindle", id: 302584613
+mas "Kubeterm", id: 6450548861
 mas "LanScan", id: 472226235
 mas "Lightweight PDF", id: 1450640351
 mas "Magnet", id: 441258766
