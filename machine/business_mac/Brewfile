@@ -11,206 +11,201 @@ tap "norwoodj/tap"
 tap "nrlquaker/createzap"
 tap "tuxpeople/personal"
 tap "buo/cask-upgrade"
-brew "arping" # Utility to check whether MAC addresses are already taken on a LAN
-brew "atomicparsley" # MPEG-4 command-line tool
-brew "azure-cli" # Microsoft Azure CLI 2.0
-brew "base64" # Encode and decode base64 files
-brew "bash" # Bourne-Again SHell, a UNIX command interpreter
-brew "bash-completion@2" # Programmable completion for Bash 3.2
-brew "bat" # Clone of cat(1) with syntax highlighting and Git integration
-brew "bcrypt" # Cross platform file encryption utility using blowfish
-brew "cilium-cli" # CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
-brew "coreutils" # GNU File, Shell, and Text utilities
-brew "cowsay" # Configurable talking characters in ASCII art
-brew "csshx" # Cluster ssh tool for Terminal.app
-brew "rtmpdump" # Tool for downloading RTMP streaming media
-brew "curl" # Get a file from an HTTP, HTTPS or FTP server
-brew "dialog" # Display user-friendly message boxes from shell scripts
-brew "ffmpeg" # Play, record, convert, and stream audio and video
-brew "findutils" # Collection of GNU find, xargs, and locate
-brew "fping" # Scriptable ping program for checking if multiple hosts are up
-brew "gh" # GitHub command-line tool
-brew "git" # Distributed revision control system
-brew "git-cola" # Highly caffeinated git GUI
-brew "git-flow" # Extensions to follow Vincent Driessen's branching model
-brew "gnu-barcode" # Convert text strings to printed bars
-brew "gnu-getopt" # Command-line option parsing utility
-brew "gnu-sed" # GNU implementation of the famous stream editor
-brew "gnu-tar" # GNU version of the tar archiving utility
-brew "gnupg" # GNU Pretty Good Privacy (PGP) package
-brew "gnuplot" # Command-driven, interactive function plotting
-brew "go" # Open source programming language to build simple/reliable/efficient software
-brew "grep" # GNU grep, egrep and fgrep
-brew "grsync" # GUI for rsync
-brew "gzip" # Popular GNU data compression program
-brew "hadolint" # Smarter Dockerfile linter to validate best practices
-brew "haste-client" # CLI client for haste-server
-brew "helm" # Kubernetes package manager
-brew "htop" # Improved top (interactive process viewer)
-brew "httperf" # Tool for measuring webserver performance
-brew "httpie" # User-friendly cURL replacement (command-line HTTP client)
-brew "httrack" # Website copier/offline browser
-brew "imapsync" # Migrate or backup IMAP mail accounts
-brew "iperf" # Tool to measure maximum TCP and UDP bandwidth
-brew "iperf3" # Update of iperf: measures TCP, UDP, and SCTP bandwidth
-brew "jq" # Lightweight and flexible command-line JSON processor
-brew "jsonpp" # Command-line JSON pretty-printer
-brew "k3d" # Little helper to run Rancher Lab's k3s in Docker
-brew "k9s" # Kubernetes CLI To Manage Your Clusters In Style!
-brew "keychain" # User-friendly front-end to ssh-agent(1)
-brew "kind" # Run local Kubernetes cluster in Docker
-brew "kompose" # Tool to move from `docker-compose` to Kubernetes
-brew "krew" # Package manager for kubectl plugins
-brew "kubernetes-cli" # Kubernetes command-line interface
-brew "kustomize" # Template-free customization of Kubernetes YAML manifests
-brew "lazygit" # Simple terminal UI for git commands
-brew "lcdf-typetools" # Manipulate OpenType and multiple-master fonts
-brew "lft" # Layer Four Traceroute (LFT), an advanced traceroute tool
-brew "lftp" # Sophisticated file transfer program
-brew "lima" # Linux virtual machines
-brew "links" # Lynx-like WWW browser that supports tables, menus, etc.
-brew "lolcat" # Rainbows and unicorns in your console!
-brew "lsof" # Utility to list open files
-brew "lynx" # Text-based web browser
-brew "m-cli" # Swiss Army Knife for macOS
-brew "markdownlint-cli" # CLI for Node.js style checker and lint tool for Markdown files
-brew "mas" # Mac App Store command-line interface
-brew "memtester" # Utility for testing the memory subsystem
-brew "minio-mc" # Replacement for ls, cp and other commands for object storage
-brew "mmv" # Move, copy, append, and link multiple files
-brew "moreutils" # Collection of tools that nobody wrote when UNIX was young
-brew "mosh" # Remote terminal application
-brew "mtools" # Tools for manipulating MSDOS files
-brew "mtr" # 'traceroute' and 'ping' in a single tool
-brew "multitail" # Tail multiple files in one terminal simultaneously
-brew "mycli" # CLI for MySQL with auto-completion and syntax highlighting
-brew "mydumper" # How MySQL DBA & support engineer would imagine 'mysqldump' ;-)
-brew "ncdu" # NCurses Disk Usage
-brew "ncftp" # FTP client with an advanced user interface
-brew "nerdctl" # ContaiNERD CTL - Docker-compatible CLI for containerd
-brew "netcat" # Utility for managing network connections
-brew "ngrep" # Network grep
-brew "nmap" # Port scanning utility for large networks
-brew "nuttcp" # Network performance measurement tool
-brew "openshift-cli" # OpenShift command-line interface tools
-brew "p7zip" # 7-Zip (high compression file archiver) implementation
-brew "packer" # Tool for creating identical machine images for multiple platforms
-# brew "pdftohtml" # Utility which converts PDF files into HTML and XML formats
-brew "pidof" # Display the PID number for a given process name
-brew "pigz" # Parallel gzip
-brew "pinentry-mac" # Pinentry for GPG on Mac
-brew "podman" # Tool for managing OCI containers and pods
-brew "pre-commit" # Framework for managing multi-language pre-commit hooks
-brew "prettier" # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
-brew "pstree" # Show ps output as a tree
-brew "pv" # Monitor data's progress through a pipe
-brew "pwgen" # Password generator
-brew "qpdf" # Tools for and transforming and inspecting PDF files
-brew "qprint" # Encoder and decoder for quoted-printable encoding
-brew "qrencode" # QR Code generation
-brew "rclone" # Rsync for cloud storage
-brew "rdiff-backup" # Reverse differential backup tool, over a network or locally
-brew "ren" # Rename multiple files in a directory
-brew "rename" # Perl-powered file rename script with many helpful built-ins
-brew "rsnapshot" # File system snapshot utility (based on rsync)
-brew "rsync" # Utility that provides fast incremental file transfer
-brew "screen" # Terminal multiplexer with VT100/ANSI terminal emulation
-brew "shellcheck" # Static analysis and lint tool, for (ba)sh scripts
-brew "sipcalc" # Advanced console-based IP subnet calculator
-brew "sops" # Editor of encrypted files
-brew "speedtest-cli" # Command-line interface for https://speedtest.net bandwidth tests
-brew "ssh-copy-id", link: true # Add a public key to a remote machine's authorized_keys file
-brew "ssldump" # SSLv3/TLS network protocol analyzer
-brew "sslscan" # Test SSL/TLS enabled services to discover supported cipher suites
-brew "svn" # needed for some casks to be installed # Version control system designed to be a better CVS
-brew "sysdig" # System-level exploration and troubleshooting tool
-brew "tcpdump" # Command-line packet analyzer
-brew "tcpflow" # TCP/IP packet demultiplexer
-brew "tcping" # TCP connect to the given IP/port combo
-brew "tcpstat" # Active TCP connections monitoring tool
-brew "tcptrace" # Analyze tcpdump output
-brew "tcptraceroute" # Traceroute implementation using TCP packets
-brew "telnet" # User interface to the TELNET protocol
-brew "tfenv" # Terraform version manager inspired by rbenv
-brew "tinc" # Virtual Private Network (VPN) tool
-brew "tmux" # Terminal multiplexer
-brew "trash" # CLI tool that moves files or folder to the trash
-brew "tree" # Display directories as trees (with optional color/HTML output)
-brew "unrtf" # RTF to other formats converter
-brew "unzip" # Extraction utility for .zip compressed archives
-brew "vagrant-completion" # Bash completion for Vagrant
-brew "velero" # Disaster recovery for Kubernetes resources and persistent volumes
-brew "vim" # Vi 'workalike' with many additional features
-brew "watch" # Executes a program periodically, showing output fullscreen
-brew "webkit2png" # Create screenshots of webpages from the terminal
-brew "wget" # Internet file retriever
-brew "whois" # Lookup tool for domain names and other internet resources
-brew "wifi-password" # Show the current WiFi network password
-brew "wput" # Tiny, wget-like FTP client for uploading files
-brew "yamllint" # Linter for YAML files
-brew "yt-dlp" # Fork of youtube-dl with additional features and fixes
-brew "yq" # Process YAML documents from the CLI
-brew "zopfli" # New zlib (gzip, deflate) compatible compressor
-brew "devopyio/yamlfmt/yamlfmt" # Formats yaml files.
-brew "fluxcd/tap/flux" # Flux CLI
-brew "go-task/tap/go-task" # Task runner / simpler Make alternative written in Go
-brew "johanhaleby/kubetail/kubetail" # Tail logs from multiple Kubernetes pods at the same time
-brew "mfuentesg/tap/ksd" # ksd` is a tool, whose aim is help you to visualize in text plain your kubernetes secrets, either `yaml` or `json` outputs.
-brew "norwoodj/tap/helm-docs" # Automatically generate markdown documentation for helm charts
-# 404 brew "tuxpeople/personal/unrar" # Extract, view, and test RAR archives
-cask "1password" # Password manager that keeps all passwords secure behind one password
-cask "1password/tap/1password-cli" # Command-line helper for the 1Password password manager
-cask "adoptopenjdk8" # Prebuilt OpenJDK binaries
-cask "aerial" # Apple TV Aerial screensaver
-cask "authy" # Two-factor authentication software
-cask "balenaetcher" # Tool to flash OS images to SD cards & USB drives
-cask "bbedit" # Text, code, and markup editor
-cask "dbeaver-community" # Universal database tool and SQL client
-cask "displaylink" # Drivers for DisplayLink docks, adapters and monitors
-cask "displaylink-login-extension" # DisplayLink Login Screen Extension
-cask "drawio" # Draw.io is free online diagram software
-cask "dropbox" # Client for the Dropbox cloud storage service
-#has 404 cask "fedora-media-writer" # Tool to write Fedora images to portable media files
-cask "firefox" # Web browser
-cask "font-roboto" # Font with a mechanical skeleton and the forms are largely geometric
-cask "font-roboto-mono" # null
-cask "forticlient-vpn"# Free VPN client for FortiClient
-#has 404 cask "ganttproject" # Gantt chart and project management application
-cask "google-chrome" # Web browser
-cask "gpg-suite" # Tools to protect your emails and files
-cask "handbrake" # 
-cask "hazel" # Automated organization
-cask "iterm2" # Terminal emulator as alternative to Apple's Terminal app
-cask "joplin" # Note taking and to-do application with synchronization capabilities
-cask "keepassx" # Personal data manager focusing on security
-cask "kubenav" # Navigator for your Kubernetes clusters right in your pocket
-cask "little-snitch" # Host-based application firewall
-cask "logi-options-plus" # Software for Logitech devices
-cask "logseq" # Privacy-first, open-source platform for knowledge sharing and management
-cask "macpass" # Open-source, KeePass-client and password manager
-cask "microsoft-teams" # Meet, chat, call, and collaborate in just one place
-cask "multipass" # Orchestrates virtual Ubuntu instances
-cask "mysides" # null
-cask "namechanger" # Rename a list of files quickly
-cask "netspot" # WiFi site survey software and WiFi scanner
-cask "platypus" # 
-cask "pocket-casts" # Podcast platform
-cask "pycharm-ce" # IDE for Python programming - Community Edition
-cask "rambox" # Free and Open Source messaging and emailing app
-cask "raspberry-pi-imager" # Imaging utility to install operating systems to a microSD card
-cask "royal-tsx" # Remote management solution
-cask "sequel-pro" # MySQL/MariaDB database management platform
-cask "slack" # Team communication and collaboration software
-cask "spotify" # Music streaming service
-cask "teamviewer" # Remote access and connectivity software focused on security
-cask "tunnelblick" # Free and open-source OpenVPN client
-#cask "tuxpeople-font-bs" # null
-cask "unetbootin" # Tool to install Linux/BSD distributions to a partition or USB drive
-cask "vagrant" # Development environment
-cask "visual-studio-code" # Open-source code editor
-cask "vlc" # Multimedia player
-cask "vmware-fusion" # Create, manage, and run virtual machines
-cask "wireshark" # 
+brew "arping"
+brew "atomicparsley"
+brew "azure-cli"
+brew "base64"
+brew "bash"
+brew "bash-completion@2"
+brew "bat"
+brew "bcrypt"
+brew "cilium-cli"
+brew "coreutils"
+brew "cowsay"
+brew "csshx"
+brew "rtmpdump"
+brew "curl"
+brew "dialog"
+brew "ffmpeg"
+brew "findutils"
+brew "fping"
+brew "gh"
+brew "git"
+brew "git-cola"
+brew "git-flow"
+brew "gnu-barcode"
+brew "gnu-getopt"
+brew "gnu-sed"
+brew "gnu-tar"
+brew "gnupg"
+brew "gnuplot"
+brew "go"
+brew "grep"
+brew "grsync"
+brew "gzip"
+brew "hadolint"
+brew "haste-client"
+brew "helm"
+brew "htop"
+brew "httperf"
+brew "httpie"
+brew "httrack"
+brew "imapsync"
+brew "iperf"
+brew "iperf3"
+brew "jq"
+brew "jsonpp"
+brew "k3d"
+brew "k9s"
+brew "keychain"
+brew "kind"
+brew "kompose"
+brew "krew"
+brew "kubernetes-cli"
+brew "kustomize"
+brew "lazygit"
+brew "lcdf-typetools"
+brew "lft"
+brew "lftp"
+brew "lima"
+brew "links"
+brew "lolcat"
+brew "lsof"
+brew "lynx"
+brew "m-cli"
+brew "markdownlint-cli"
+brew "mas"
+brew "memtester"
+brew "minio-mc"
+brew "mmv"
+brew "moreutils"
+brew "mosh"
+brew "mtools"
+brew "mtr"
+brew "multitail"
+brew "mycli"
+brew "mydumper"
+brew "ncdu"
+brew "ncftp"
+brew "nerdctl"
+brew "netcat"
+brew "ngrep"
+brew "nmap"
+brew "nuttcp"
+brew "openshift-cli"
+brew "p7zip"
+brew "packer"
+brew "pidof"
+brew "pigz"
+brew "pinentry-mac"
+brew "podman"
+brew "pre-commit"
+brew "prettier"
+brew "pstree"
+brew "pv"
+brew "pwgen"
+brew "qpdf"
+brew "qprint"
+brew "qrencode"
+brew "rclone"
+brew "rdiff-backup"
+brew "ren"
+brew "rename"
+brew "rsnapshot"
+brew "rsync"
+brew "screen"
+brew "shellcheck"
+brew "sipcalc"
+brew "sops"
+brew "speedtest-cli"
+brew "ssh-copy-id", link: true
+brew "ssldump"
+brew "sslscan"
+brew "svn"
+brew "sysdig"
+brew "tcpdump"
+brew "tcpflow"
+brew "tcping"
+brew "tcpstat"
+brew "tcptrace"
+brew "tcptraceroute"
+brew "telnet"
+brew "tfenv"
+brew "tinc"
+brew "tmux"
+brew "trash"
+brew "tree"
+brew "unrtf"
+brew "unzip"
+brew "vagrant-completion"
+brew "velero"
+brew "vim"
+brew "watch"
+brew "webkit2png"
+brew "wget"
+brew "whois"
+brew "wifi-password"
+brew "wput"
+brew "yamllint"
+brew "yt-dlp"
+brew "yq"
+brew "zopfli"
+brew "devopyio/yamlfmt/yamlfmt"
+brew "fluxcd/tap/flux"
+brew "go-task/tap/go-task"
+brew "johanhaleby/kubetail/kubetail"
+brew "mfuentesg/tap/ksd"
+brew "norwoodj/tap/helm-docs"
+cask "1password"
+cask "1password/tap/1password-cli"
+cask "adoptopenjdk8"
+cask "aerial"
+cask "authy"
+cask "balenaetcher"
+cask "bbedit"
+cask "dbeaver-community"
+cask "displaylink"
+cask "displaylink-login-extension"
+cask "drawio"
+cask "dropbox"
+cask "firefox"
+cask "font-roboto"
+cask "font-roboto-mono"
+cask "forticlient-vpn"
+cask "google-chrome"
+cask "gpg-suite"
+cask "handbrake"
+cask "hazel"
+cask "iterm2"
+cask "joplin"
+cask "keepassx"
+cask "kubenav"
+cask "little-snitch"
+cask "logi-options-plus"
+cask "logseq"
+cask "macpass"
+cask "microsoft-teams"
+cask "multipass"
+cask "mysides"
+cask "namechanger"
+cask "netspot"
+cask "platypus"
+cask "pocket-casts"
+cask "pycharm-ce"
+cask "rambox"
+cask "raspberry-pi-imager"
+cask "royal-tsx"
+cask "sequel-pro"
+cask "slack"
+cask "spotify"
+cask "teamviewer"
+cask "tunnelblick"
+cask "unetbootin"
+cask "vagrant"
+cask "visual-studio-code"
+cask "vlc"
+cask "vmware-fusion"
+cask "wireshark"
 mas "1Password for Safari", id: 1569813296
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
@@ -239,7 +234,6 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "PDFScanner", id: 410968114
 mas "Playgrounds", id: 1496833156
-# mas "Proxie", id: 897814548
 mas "Reeder", id: 1529448980
 mas "Save To Matter", id: 1548677272
 mas "SQLPro for SQLite", id: 586001240
@@ -248,25 +242,20 @@ mas "Todoist", id: 585829637
 mas "Unibox", id: 702816521
 mas "VMware Remote Console", id: 1230249825
 mas "WireGuard", id: 1451685025
-
-
-cask "microsoft-auto-update" # Provides updates to various Microsoft products
-cask "obsidian" # Knowledge base that works on top of a local folder of plain text Markdown files
-cask "vmware-horizon-client" # Virtual machine client
-cask "webex-meetings" # Video communication and virtual meeting platform
-cask "rar" # Archive manager for data compression and backups
-
-
-brew "age" # Simple, modern, secure file encryption
-brew "direnv" # Load/unload environment variables based on $PWD
-brew "gitleaks" # Audit git repos for secrets
-brew "tfsec" # Static analysis security scanner for your terraform code
-brew "oci-cli" # Oracle Cloud Infrastructure CLI
-brew "stern" # Tail multiple Kubernetes pods & their containers
-brew "trivy" # Vulnerability scanner for container images, file systems, and Git repos
-brew "cosign" # Container Signing
-brew "gawk" # GNU awk utility
-brew "ipcalc" # Calculate various network masks, etc. from a given IP address
-brew "terraform-docs" # Tool to generate documentation from Terraform modules
-
-brew "poppler" # PDF rendering library (based on the xpdf-3.0 code base)
+cask "microsoft-auto-update"
+cask "obsidian"
+cask "vmware-horizon-client"
+cask "webex-meetings"
+cask "rar"
+brew "age"
+brew "direnv"
+brew "gitleaks"
+brew "tfsec"
+brew "oci-cli"
+brew "stern"
+brew "trivy"
+brew "cosign"
+brew "gawk"
+brew "ipcalc"
+brew "terraform-docs"
+brew "poppler"
