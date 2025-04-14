@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Kubernetes
+alias kdelerr='kubectl get pods -A --field-selector=status.phase=Failed -o custom-columns="NAMESPACE:.metadata.namespace,NAME:.metadata.name" --no-headers | while read ns pod; do kubectl delete pod -n "$ns" "$pod"; done'
+
+
 # Container based tools
 alias doc="docker run -it tdeutsch/openshift-cli /app/oc"
 
