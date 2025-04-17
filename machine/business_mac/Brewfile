@@ -1,12 +1,11 @@
 tap "buo/cask-upgrade"
 tap "carvel-dev/carvel"
 tap "devopyio/yamlfmt"
+tap "emqx/mqttx"
 tap "fluxcd/tap"
 tap "gabrie30/utils"
 tap "go-task/tap"
 tap "hashicorp/tap"
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "johanhaleby/kubetail"
 tap "mfuentesg/tap"
 tap "norwoodj/tap"
@@ -14,6 +13,7 @@ tap "nrlquaker/createzap"
 tap "siderolabs/tap"
 tap "tuxpeople/personal"
 tap "utkuozdemir/pv-migrate"
+tap "vmware-tanzu/tanzu"
 # Simple, modern, secure file encryption
 brew "age"
 # Utility to check whether MAC addresses are already taken on a LAN
@@ -42,8 +42,12 @@ brew "clusterctl"
 brew "coreutils"
 # Container Signing
 brew "cosign"
+# Tool for interacting with remote images and registries
+brew "crane"
 # Cluster ssh tool for Terminal.app
 brew "csshx"
+# Validate and define text-based and dynamic configuration
+brew "cue"
 # Tool for downloading RTMP streaming media
 brew "rtmpdump"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -52,6 +56,8 @@ brew "curl"
 brew "direnv"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
+# Isolated development environments using Docker
+brew "docker-compose"
 # Utilities for the ext2, ext3, and ext4 file systems
 brew "e2fsprogs"
 # Perl lib for reading and writing EXIF metadata
@@ -68,8 +74,6 @@ brew "fping"
 brew "gawk"
 # GitHub command-line tool
 brew "gh"
-# Interpreter for PostScript and PDF
-brew "ghostscript"
 # Distributed revision control system
 brew "git"
 # Highly caffeinated git GUI
@@ -200,7 +204,7 @@ brew "mtr"
 brew "multitail"
 # CLI for MySQL with auto-completion and syntax highlighting
 brew "mycli"
-# How MySQL DBA & support engineer would imagine 'mysqldump' ;-)
+# MySQL logical backup tool
 brew "mydumper"
 # NCurses Disk Usage
 brew "ncdu"
@@ -213,11 +217,13 @@ brew "ngrep"
 # Port scanning utility for large networks
 brew "nmap"
 # Prometheus exporter for machine metrics
-brew "node_exporter", restart_service: true
+brew "node_exporter", restart_service: :changed
 # Network performance measurement tool
 brew "nuttcp"
 # Oracle Cloud Infrastructure CLI
 brew "oci-cli"
+# Create, run, and share large language models (LLMs)
+brew "ollama"
 # OpenShift command-line interface tools
 brew "openshift-cli"
 # 7-Zip (high compression file archiver) implementation
@@ -232,8 +238,8 @@ brew "zopfli"
 brew "pigz"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
-# Manage compile and link flags for libraries
-brew "pkg-config"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
 # Tool for managing OCI containers and pods
 brew "podman"
 # Framework for managing multi-language pre-commit hooks
@@ -260,6 +266,8 @@ brew "qrencode"
 brew "rclone"
 # Reverse differential backup tool, over a network or locally
 brew "rdiff-backup"
+# Docker and OCI Registry Client in Go and tooling using those libraries
+brew "regclient"
 # Rename multiple files in a directory
 brew "ren"
 # Perl-powered file rename script with many helpful built-ins
@@ -336,8 +344,6 @@ brew "velero"
 brew "vim"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
-# Create screenshots of webpages from the terminal
-brew "webkit2png"
 # Internet file retriever
 brew "wget"
 # Lookup tool for domain names and other internet resources
@@ -423,7 +429,7 @@ cask "keepassx"
 # Host-based application firewall
 cask "little-snitch"
 # Software for Logitech devices
-cask "logi-options-plus"
+cask "logi-options+"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
 # Open-source, KeePass-client and password manager
@@ -441,10 +447,14 @@ cask "namechanger"
 cask "netspot"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Virtual machine client
+cask "omnissa-horizon-client"
 # Tool to create native applications from command-line scripts
 cask "platypus"
 # Podcast platform
 cask "pocket-casts"
+# Browse, manage, inspect containers and images
+cask "podman-desktop"
 # IDE for Python programming - Community Edition
 cask "pycharm-ce"
 # Free and Open Source messaging and emailing app
@@ -479,8 +489,6 @@ cask "vagrant"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
-# Virtual machine client
-cask "vmware-horizon-client"
 # Video communication and virtual meeting platform
 cask "webex-meetings"
 # Network protocol analyzer
@@ -494,7 +502,6 @@ mas "Affinity Publisher", id: 881418622
 mas "Agenda", id: 1287445660
 mas "Apple Configurator", id: 1037126344
 mas "Bear", id: 1091189122
-mas "com.hankinsoft.osx.sqliteprofessional", id: 586001240
 mas "DaisyDisk", id: 411643860
 mas "ForkLift", id: 412448059
 mas "FruitJuice", id: 671736912
@@ -508,33 +515,38 @@ mas "Kubeterm", id: 6450548861
 mas "LanScan", id: 472226235
 mas "Lightweight PDF", id: 1450640351
 mas "Magnet", id: 441258766
+mas "Matter", id: 1548677272
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft OneNote", id: 784801555
 mas "Microsoft Outlook", id: 985367838
 mas "Microsoft PowerPoint", id: 462062816
-mas "Microsoft Remote Desktop", id: 1295203466
 mas "Microsoft To Do", id: 1274495053
 mas "Microsoft Word", id: 462054704
 mas "MindNode", id: 1289197285
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "PDFCombo", id: 1030461463
 mas "PDFScanner", id: 410968114
-mas "Playgrounds", id: 1496833156
 mas "Reeder", id: 1529448980
-mas "Save to Matter", id: 1548677272
 mas "Sid Meier's Railroads!", id: 536502825
+mas "SQLPro for SQLite", id: 586001240
+mas "Swift Playground", id: 1496833156
 mas "Termius", id: 1176074088
+mas "TextSniper", id: 1528890965
 mas "Todoist", id: 585829637
 mas "Toggl Track", id: 1291898086
 mas "Unibox", id: 702816521
 mas "VMware Remote Console", id: 1230249825
+mas "Windows App", id: 1295203466
 mas "WireGuard", id: 1451685025
 vscode "4ops.terraform"
 vscode "albert.tabout"
 vscode "britesnow.vscode-toggle-quotes"
 vscode "codezombiech.gitignore"
+vscode "continue.continue"
 vscode "davidanson.vscode-markdownlint"
 vscode "dhoeric.ansible-vault"
+vscode "docker.docker"
 vscode "donjayamanne.githistory"
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
@@ -542,21 +554,36 @@ vscode "esbenp.prettier-vscode"
 vscode "exiasr.hadolint"
 vscode "fcrespo82.markdown-table-formatter"
 vscode "foxundermoon.shell-format"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
 vscode "gitlab.gitlab-workflow"
 vscode "golang.go"
 vscode "hashicorp.terraform"
+vscode "irarainey.applicationregistrations"
 vscode "joaompinto.vscode-graphviz"
 vscode "kennylong.kubernetes-yaml-formatter"
 vscode "lunuan.kubernetes-templates"
 vscode "mgtrrz.terraform-completer"
+vscode "misodee.vscode-nbt"
 vscode "mitchdenny.ecdc"
 vscode "mohamedfaizal.tf-az-codesnippet"
 vscode "mohsen1.prettify-json"
+vscode "ms-azure-load-testing.microsoft-testing"
+vscode "ms-azuretools.azure-dev"
+vscode "ms-azuretools.vscode-azure-github-copilot"
+vscode "ms-azuretools.vscode-azureappservice"
+vscode "ms-azuretools.vscode-azurecontainerapps"
+vscode "ms-azuretools.vscode-azurefunctions"
 vscode "ms-azuretools.vscode-azureresourcegroups"
+vscode "ms-azuretools.vscode-azurestaticwebapps"
+vscode "ms-azuretools.vscode-azurestorage"
 vscode "ms-azuretools.vscode-azureterraform"
+vscode "ms-azuretools.vscode-azurevirtualmachines"
+vscode "ms-azuretools.vscode-cosmosdb"
 vscode "ms-azuretools.vscode-docker"
+vscode "ms-dotnettools.vscode-dotnet-runtime"
 vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
 vscode "ms-python.debugpy"
 vscode "ms-python.isort"
@@ -570,10 +597,12 @@ vscode "ms-vscode.azurecli"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.hexeditor"
 vscode "ms-vscode.remote-explorer"
+vscode "ms-vscode.vscode-node-azure-pack"
 vscode "oderwat.indent-rainbow"
 vscode "pjmiravalle.terraform-advanced-syntax-highlighting"
 vscode "platformio.platformio-ide"
 vscode "psykosoldi3r.vscode-git-flow"
+vscode "rabinhansda.flask-builder"
 vscode "redhat.ansible"
 vscode "redhat.vscode-commons"
 vscode "redhat.vscode-xml"
