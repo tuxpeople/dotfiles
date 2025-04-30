@@ -384,8 +384,6 @@ brew "utkuozdemir/pv-migrate/pv-migrate"
 cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
-# Prebuilt OpenJDK binaries
-cask "adoptopenjdk"
 # Apple TV Aerial screensaver
 cask "aerial"
 # Tool to flash OS images to SD cards & USB drives
