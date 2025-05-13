@@ -1,0 +1,71 @@
+# Übersicht: Shell Aliase und Funktionen
+
+## 📌 Aliase
+- `..`: Wechselt ein Verzeichnis nach oben
+- `...`: Wechselt zwei Verzeichnisse nach oben
+- `....`: Wechselt drei Verzeichnisse nach oben
+- `.....`: Wechselt vier Verzeichnisse nach oben
+- `afk`: 
+- `airport`: 
+- `c`: 
+- `canary`: 
+- `chrome`: 
+- `chromekill`: 
+- `d`: Wechselt in den Dropbox-Ordner
+- `dl`: Wechselt in den Downloads-Ordner
+- `doc`: Startet OpenShift CLI via Docker
+- `dt`: Wechselt in den Desktop-Ordner
+- `egrep`: Farbige egrep-Ausgabe
+- `egrep`: Farbige egrep-Ausgabe
+- `emptydns`: 
+- `emptytrash`: 
+- `fgrep`: Farbige fgrep-Ausgabe
+- `fgrep`: Farbige fgrep-Ausgabe
+- `flush`: 
+- `g`: Alias für git
+- `grep`: Farbige grep-Ausgabe
+- `grep`: Farbige grep-Ausgabe
+- `ifactive`: 
+- `ip`: 
+- `ips`: 
+- `kdelerr`: Löscht fehlgeschlagene Pods aus allen Namespaces
+- `l`: Listet Dateien mit Details
+- `la`: Zeigt alle (auch versteckte) Dateien außer . und ..
+- `ll`: Zeigt detaillierte Dateiliste
+- `localip`: 
+- `lsd`: Listet nur Verzeichnisse
+- `map`: 
+- `mergepdf`: 
+- `mergepr`: Merged alle GitHub PRs mit feat|fix|chore
+- `n`: Wechselt in den Nextcloud-Ordner
+- `p`: Wechselt in das projects-Verzeichnis
+- `path`: 
+- `plistbuddy`: 
+- `pumpitup`: 
+- `reload`: 
+- `show`: 
+- `showdesktop`: 
+- `spotoff`: 
+- `spoton`: 
+- `stfu`: 
+- `sudo`: Erlaubt Nutzung von Aliases mit sudo
+- `sudo`: Erlaubt Nutzung von Aliases mit sudo
+- `update`: 
+- `urlencode`: 
+- `week`: 
+- `~`: Wechselt ins Home-Verzeichnis
+
+## 🛠️ Funktionen
+- `cdf()` – Springt zum obersten Finder-Fenster (macOS)
+- `digga()` – Führt `dig` aus und zeigt nützliche Infos
+- `fs()` – Zeigt Größe von Dateien/Verzeichnissen
+- `getcertnames()` – Zeigt CNs und SANs eines SSL-Zertifikats
+- `gz()` – Vergleicht Größe vs. GZIP-Komprimierung
+- `haste()` – Postet STDIN auf haste-server und gibt URL zurück
+- `mkd()` – Erstellt ein Verzeichnis und wechselt hinein
+- `o()` – Öffnet aktuelles Verzeichnis oder Argument (plattformabhängig)
+- `phpserver()` – Startet lokalen PHP-Server auf IP/Port
+- `randomstr()` – Erzeugt eine zufällige Zeichenkette
+- `server()` – Startet einfachen HTTP-Server und öffnet Browser
+- `targz()` – Erstellt ein tar.gz Archiv mit Kompressor (pigz/gzip)
+- `tre()` – Zeigt Verzeichnisstruktur mit tree (mit Farben, ohne .git)

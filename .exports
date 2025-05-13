@@ -1,20 +1,23 @@
 #!/usr/bin/env bash
 
 # Make vim the default editor.
-export EDITOR='vim';
+export EDITOR='vim'
 
-# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
-export PYTHONIOENCODING='UTF-8';
+# Make Python use UTF-8 encoding for input/output.
+export PYTHONIOENCODING='UTF-8'
 
-# Highlight section titles in manual pages.
-export LESS_TERMCAP_md="${yellow}";
+# Highlight section titles in manual pages (yellow bold).
+export LESS_TERMCAP_md=$'\e[01;33m'
 
 # Don’t clear the screen after quitting a manual page.
-export MANPAGER='less -X';
+export MANPAGER='less -X'
 
-# Avoid issues with `gpg` as installed via Homebrew.
-# https://stackoverflow.com/a/42265848/96656
-export GPG_TTY=$(tty);
+# GPG compatibility
+export GPG_TTY=$(tty)
 
-# Hide the “default interactive shell is now zsh” warning on macOS.
-export BASH_SILENCE_DEPRECATION_WARNING=1;
+# macOS: hide "default interactive shell is now zsh" warning
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# Folder of KUBECONFIGS
+#export KUBECONFIG="$HOME/.kube/config:$(find $HOME/iCloudDrive/Allgemein/kubectl -type f -name '*.yaml' | tr '\n' ':' | sed 's/:$//')"
+export KUBECONFIG="$(find $HOME/iCloudDrive/Allgemein/kubectl -type f -name '*.yaml' | tr '\n' ':' | sed 's/:$//')"
