@@ -222,8 +222,6 @@ brew "node_exporter", restart_service: :changed
 brew "nuttcp"
 # Oracle Cloud Infrastructure CLI
 brew "oci-cli"
-# Create, run, and share large language models (LLMs)
-brew "ollama"
 # OpenShift command-line interface tools
 brew "openshift-cli"
 # 7-Zip (high compression file archiver) implementation
@@ -445,6 +443,8 @@ cask "namechanger"
 cask "netspot"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Create, run, and share large language models (LLMs)
+cask "ollama-app"
 # Virtual machine client
 cask "omnissa-horizon-client"
 # Tool to create native applications from command-line scripts
