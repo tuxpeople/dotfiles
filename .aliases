@@ -3,9 +3,6 @@
 # Kubernetes
 alias kdelerr='kubectl get pods -A --field-selector=status.phase=Failed -o custom-columns="NAMESPACE:.metadata.namespace,NAME:.metadata.name" --no-headers | while read ns pod; do kubectl delete pod -n "$ns" "$pod"; done'
 
-# Github
-alias mergepr="for i in $(gh pr list | grep 'feat\|fix\|chore' | awk '{ print $1 }'); do   gh pr merge $i -d -m; done"
-
 # Container based tools
 alias doc="docker run -it tdeutsch/openshift-cli /app/oc"
 
