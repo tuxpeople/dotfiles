@@ -26,6 +26,9 @@ export PATH="$HOME/bin:$HOME/iCloudDrive/Allgemein/bin/:${HOME}/.krew/bin:$PATH"
 
 eval "$(direnv hook bash)"
 
+# Initialize mise (Homebrew installation)
+eval "$(mise activate bash)"
+
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - bash)"
