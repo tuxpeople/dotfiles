@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ln:*)",
+      "Read(//opt/homebrew/Homebrew/bin/**)",
+      "Bash(ssh:*)",
+      "Read(//Volumes/development/github/tuxpeople/ansible-sky/plays/**)",
+      "Read(//Volumes/development/github/tuxpeople/ansible-sky/**)",
+      "WebSearch",
+      "WebFetch(domain:min.io)",
+      "WebFetch(domain:docs.min.io)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
