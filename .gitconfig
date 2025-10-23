@@ -217,5 +217,13 @@
 	followTags = true
 [gpg "ssh"]
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
-[includeIf "gitdir:/Volumes/development/gitlab/umb.tdeutsch/"]
-	path = ~/.gitconfig-umb
+
+[url "git@gitlab-umb:umbag/"]
+    insteadOf = git@gitlab.com:umbag/
+    insteadOf = ssh://git@gitlab.com/umbag/
+    insteadOf = https://gitlab.com/umbag/
+
+[url "git@gitlab-umb:umb.tdeutsch/"]
+    insteadOf = git@gitlab.com:umb.tdeutsch/
+    insteadOf = ssh://git@gitlab.com/umb.tdeutsch/
+    insteadOf = https://gitlab.com/umb.tdeutsch/
