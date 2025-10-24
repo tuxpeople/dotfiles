@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# 1Password CLI wrapped commands
+alias ghorg='op run -- ghorg'
+
 # Kubernetes
 alias kdelerr='kubectl get pods -A --field-selector=status.phase=Failed -o custom-columns="NAMESPACE:.metadata.namespace,NAME:.metadata.name" --no-headers | while read ns pod; do kubectl delete pod -n "$ns" "$pod"; done'
 
