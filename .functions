@@ -137,7 +137,11 @@ function gz() {
 
 # Run `dig` and display the most useful info
 function digga() {
-	dig +nocmd "$1" any +multiline +noall +answer
+	[ -z "$1" ] && { echo "Usage: digga <hostname>" >&2; return 1; }
+	local record_types=("A" "AAAA" "MX" "CNAME")
+	for record in "${record_types[@]}"; do
+		dig +nocmd "$1" "$record" +multiline +noall +answer
+	done
 }
 
 # Show all the names (CNs and SANs) listed in the SSL certificate

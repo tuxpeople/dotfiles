@@ -71,7 +71,7 @@ Dieses Dokument fasst alle Shell-Aliases und Funktionsdefinitionen aus den dotfi
 - `server [PORT]`: Startet einen einfachen Python-HTTP-Server (Default 8000), öffnet den Browser und erzwingt UTF-8/Text-Defaults.
 - `phpserver [PORT]`: Startet `php -S` auf der lokalen IP von `en1` (Default 4000) und öffnet den Browser.
 - `gz DATEI`: Vergleicht Original- und Gzip-Größe und berechnet das prozentuale Verhältnis.
-- `digga DOMAIN`: Führt `dig` mit kompaktem, gut lesbarem Output (`any +multiline +noall +answer`) aus.
+- `digga DOMAIN`: Fragt nacheinander die DNS-Typen `A`, `AAAA`, `MX` und `CNAME` mit `dig` ab und zeigt die Antworten kompakt (`+multiline +noall +answer`).
 - `getcertnames DOMAIN`: Holt das TLS-Zertifikat und zeigt `CN` sowie `SAN`-Einträge.
 - `o [ZIEL]`: Öffnet das aktuelle Verzeichnis oder einen angegebenen Pfad mit dem `open`-Alias (plattformabhängig).
 - `tre [PFAD]`: Führt `tree` mit versteckten Dateien und Farb-Hervorhebung aus und piped in `less`.
@@ -80,4 +80,3 @@ Dieses Dokument fasst alle Shell-Aliases und Funktionsdefinitionen aus den dotfi
 
 ### `.bash_prompt`
 - `prompt_git PREFIX SUFFIX`: Ermittelt den aktuellen Git-Branch/Commit sowie Statusmarken (`+`, `!`, `?`, `$`) und baut die farbige Prompt-Komponente für `PS1`.
-
