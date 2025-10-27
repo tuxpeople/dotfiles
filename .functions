@@ -210,21 +210,14 @@ function tre() {
 # PODMAN_TIMEOUT (Standard: 60) Sekunden Wartezeit auf Socket
 
 podman() {
-  # Pfad zur echten Podman-CLI finden
-  local PODMAN_BIN
-  PODMAN_BIN=$(command -v podman) || { echo "podman: CLI nicht gefunden" >&2; return 127; }
+  local errfile; errfile="$(mktemp -t podmanwrap.XXXXXX)"
 
-  local errfile
-  errfile="$(mktemp -t podmanwrap.XXXXXX)"
-
-  # Erster Versuch: ganz normal
-  if "$PODMAN_BIN" "$@" 2> >(tee -a "$errfile" >&2); then
+  if command podman "$@" 2> >(tee -a "$errfile" >&2); then
     rm -f "$errfile"
     return 0
   fi
   local status=$?
 
-  # Prüfen auf typische "Daemon nicht erreichbar"-Fehler
   if grep -qiE \
     '(cannot connect to podman|unable to connect to podman socket|connection refused|failed to connect)' \
     "$errfile"; then
@@ -234,39 +227,34 @@ podman() {
     local timeout="${PODMAN_TIMEOUT:-60}"
 
     echo "podman: Daemon nicht erreichbar. Starte Podman Machine '${machine}'..." >&2
-    if ! podman machine start "$machine" >/dev/null 2>&1; then
+    if ! command podman machine start "$machine" >/dev/null 2>&1; then
       echo "podman: Konnte Podman Machine '${machine}' nicht starten." >&2
       return $status
     fi
 
-    # Socket-Pfad ermitteln (sicherer als hartkodiert)
+    # Socket via Connection-Liste ermitteln
     local sock
-    sock=$(podman system connection list --format '{{.URI}}' 2>/dev/null | grep '^unix://' | head -n1 | sed 's|^unix://||')
-
-    # Falls kein Socket in der Connection-Liste steht (z. B. frisch eingerichtet)
+    sock=$(command podman system connection list --format '{{.URI}}' 2>/dev/null | grep '^unix://' | head -n1 | sed 's|^unix://||')
     if [ -z "$sock" ]; then
+      # Fallback: temporären Sock suchen (macOS)
       sock=$(find /var/folders -type s -name 'podman-machine-*-api.sock' 2>/dev/null | head -n1)
     fi
 
-    # Warten bis Socket reagiert
     local t=0
     while (( t < timeout )); do
-      if [ -S "$sock" ] && "$PODMAN_BIN" info >/dev/null 2>&1; then
+      if [ -S "$sock" ] && command podman info >/dev/null 2>&1; then
         break
       fi
-      sleep 1
-      t=$((t+1))
+      sleep 1; t=$((t+1))
     done
     if (( t >= timeout )); then
-      echo "podman: Timeout (${timeout}s) beim Warten auf Socket ${sock}." >&2
+      echo "podman: Timeout (${timeout}s) beim Warten auf ${sock}." >&2
       return $status
     fi
 
-    # Befehl erneut ausführen
-    "$PODMAN_BIN" "$@"
+    command podman "$@"
     return $?
   else
-    # War ein anderer Fehler → unverändert durchreichen
     rm -f "$errfile"
     return $status
   fi
@@ -281,56 +269,49 @@ podman() {
 # LIMA_TIMEOUT (Sekunden, Standard: 90)
 
 docker() {
-  # Pfad zur echten Docker-CLI (um die Funktion zu umgehen)
-  local DOCKER_BIN
-  DOCKER_BIN=$(command -v docker) || { echo "docker: CLI nicht gefunden" >&2; return 127; }
+  # Erster Versuch: echten docker-Binary-Aufruf
+  local errfile; errfile="$(mktemp -t dockerwrap.XXXXXX)"
 
-  # Erstversuch: ganz normal ausführen
-  local errfile
-  errfile="$(mktemp -t dockerwrap.XXXXXX)"
-  # stderr live anzeigen und zugleich in Datei mitschneiden
-  if "$DOCKER_BIN" "$@" 2> >(tee -a "$errfile" >&2); then
+  if command docker "$@" 2> >(tee -a "$errfile" >&2); then
     rm -f "$errfile"
     return 0
   fi
   local status=$?
 
-  # Prüfen, ob es ein typischer Verbindungsfehler zum Daemon ist
+  # Nur bei Verbindungsfehlern automatisch Lima starten
   if grep -qiE \
     '(cannot connect to the docker daemon|is the docker daemon running|error during connect|dial unix .+docker\.sock: connect: (connection refused|no such file or directory))' \
     "$errfile"; then
     rm -f "$errfile"
 
-    # Konfigurierbar per Env: LIMA_INSTANCE, LIMA_SOCKET, LIMA_TIMEOUT
     local inst="${LIMA_INSTANCE:-docker}"
     local sock="${LIMA_SOCKET:-$HOME/.lima/${inst}/sock/docker.sock}"
     local timeout="${LIMA_TIMEOUT:-90}"
 
     echo "docker: Daemon nicht erreichbar. Starte Lima-Instanz '${inst}'..." >&2
-    if ! limactl start "$inst" >/dev/null 2>&1; then
+    if ! command limactl start "$inst" >/dev/null 2>&1; then
       echo "docker: Konnte Lima-Instanz '${inst}' nicht starten." >&2
       return $status
     fi
 
-    # Auf Socket + responsive Daemon warten
+    # Auf den Socket & responsive Daemon warten
     local t=0
     while (( t < timeout )); do
-      if [ -S "$sock" ] && "$DOCKER_BIN" -H "unix://$sock" version >/dev/null 2>&1; then
+      if [ -S "$sock" ] && command docker -H "unix://$sock" version >/dev/null 2>&1; then
         break
       fi
-      sleep 1
-      t=$((t+1))
+      sleep 1; t=$((t+1))
     done
     if (( t >= timeout )); then
-      echo "docker: Timeout (${timeout}s) beim Warten auf Socket ${sock}." >&2
+      echo "docker: Timeout (${timeout}s) beim Warten auf ${sock}." >&2
       return $status
     fi
 
-    # Erneut mit den Original-Argumenten versuchen (respektiert deinen aktuellen Context)
-    "$DOCKER_BIN" "$@"
+    # Erneut ausführen (respektiert deinen aktuellen Context)
+    command docker "$@"
     return $?
   else
-    # Kein Verbindungsfehler: Original-Fehlercode/-ausgabe durchreichen
+    # Kein Verbindungsfehler → Originalfehler durchreichen
     rm -f "$errfile"
     return $status
   fi
