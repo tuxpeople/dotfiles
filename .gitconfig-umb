@@ -1,5 +1,0 @@
-# Alles im Firmenordner: gitlab.com → gitlab-umb (damit der Firmen-Key greift)
-[url "git@gitlab-umb:"]
-    insteadOf = git@gitlab.com:umb.tdeutsch/
-    insteadOf = ssh://git@gitlab.com/umb.tdeutsch/
-    insteadOf = https://gitlab.com/umb.tdeutsch/
