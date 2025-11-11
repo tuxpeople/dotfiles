@@ -102,7 +102,8 @@ else
 fi;
 
 if [[ `uname` == "Darwin" ]]; then
-	myicon=$'\uf8ff'
+	# Use explicit UTF-8 bytes so the glyph also works with /bin/bash 3.2 (no \u support)
+	myicon=$'\xEF\xA3\xBF'
 elif [[ `uname` == "Linux" ]]; then
 	myicon='🐧'
 else

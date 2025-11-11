@@ -6,7 +6,7 @@ export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
 
 # Homebrew path
 if [ "$(uname -m)" == "arm64" ]; then
-	eval "$(/opt/homebrew/bin/brew shellenv)"
+	eval $(/opt/homebrew/bin/brew shellenv bash)
 else
 	export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/sbin:/usr/local/bin:$PATH"
 fi
@@ -39,9 +39,6 @@ eval "$(pyenv init - bash)"
 #eval "$(keychain --eval --ignore-missing --quiet --inherit any $(ls -1 ${HOME}/.ssh/id* | grep -v ".pub" | xargs -L1 basename | tr '\n' ' '))"
 #eval "$(keychain --eval --ignore-missing --quiet --inherit any /Users/tdeutsch/.ssh/id_rsa)"
 
-#. <(flux completion bash)
-#. <(kubectl completion bash)
-
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -73,6 +70,16 @@ if which brew &>/dev/null && [ -r "$(brew --prefix)/etc/profile.d/bash_completio
 	source "$(brew --prefix)/etc/profile.d/bash_completion.sh"
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion
+fi
+
+if command -v flux >/dev/null 2>&1; then
+	# Keep Flux CLI autocompletion available when Homebrew's loader misses it
+	source <(flux completion bash)
+fi
+
+if command -v kubectl >/dev/null 2>&1; then
+	# Restore kubectl autocompletion which used to be provided via the CLI
+	source <(kubectl completion bash)
 fi
 
 # Enable tab completion for `g` by marking it as an alias for `git`
