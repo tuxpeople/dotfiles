@@ -1,42 +1,34 @@
 # Thomas’s dotfiles
 
-![Screenshot of my shell prompt](https://i.imgur.com/EkEtphC.png)
-
 With many thanks to [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
 
 ## Installation
 
-**Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
+**Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don't want or need. Don't blindly use my settings unless you know what that entails. Use at your own risk!
 
-### Using Git and the bootstrap script
+### Manual Installation
 
-You can clone the repository wherever you want. (I like to keep it in `~/git/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
-
-```bash
-mkdir ~/git/; cd ~/git/; git clone https://github.com/tuxpeople/dotfiles.git && cd dotfiles && source bootstrap.sh
-```
-
-To update, `cd` into your local `dotfiles` repository and then:
+You can clone the repository wherever you want. (I like to keep it in `~/git/dotfiles`, with `~/dotfiles` as a symlink.)
 
 ```bash
-source bootstrap.sh
+mkdir -p ~/git
+cd ~/git
+git clone https://github.com/tuxpeople/dotfiles.git
+cd dotfiles
 ```
 
-Alternatively, to update while avoiding the confirmation prompt:
+Then manually symlink or copy the files you need to your home directory. For example:
 
 ```bash
-set -- -f; source bootstrap.sh
+ln -s ~/git/dotfiles/.bashrc ~/.bashrc
+ln -s ~/git/dotfiles/.bash_profile ~/.bash_profile
+ln -s ~/git/dotfiles/.gitconfig ~/.gitconfig
+# ... and so on for other files you want to use
 ```
 
-### Git-free install
+### Automated Installation with Ansible
 
-To install these dotfiles without Git:
-
-```bash
-cd; curl -#L https://github.com/tuxpeople/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,.osx,LICENSE-MIT.txt}
-```
-
-To update later on, just run that command again.
+For automated deployment, I use Ansible with the [geerlingguy.dotfiles](https://github.com/geerlingguy/ansible-role-dotfiles) role. This is my preferred method for setting up new machines.
 
 ### Specify the `$PATH`
 
@@ -72,18 +64,17 @@ You could also use `~/.extra` to override settings, functions and aliases from m
 When setting up a new Mac, you may want to set some sensible macOS defaults:
 
 ```bash
-./.macos
+~/.macos
 ```
 
 ### Install Homebrew formulae
 
-When setting up a new Mac, you may want to install some common [Homebrew](https://brew.sh/) formulae (after installing Homebrew, of course):
+When setting up a new Mac, you may want to install [Homebrew](https://brew.sh/) and your preferred formulae. Some functionality in these dotfiles depends on certain packages being installed:
 
-```bash
-./brew.sh
-```
-
-Some of the functionality of these dotfiles depends on formulae installed by `brew.sh`. If you don’t plan to run `brew.sh`, you should look carefully through the script and manually install any particularly important ones. A good example is Bash/Git completion: the dotfiles use a special version from Homebrew.
+- **Git completion**: These dotfiles use the Homebrew version of Git with enhanced completion
+- **direnv**: For directory-based environment variables (see `.bash_profile:89`)
+- **mise**: Modern replacement for asdf version manager (see `.bash_profile:93`)
+- **pyenv**: Python version management (see `.bash_profile:97`)
 
 ## Thanks to…
 

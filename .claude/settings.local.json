@@ -8,7 +8,9 @@
       "Read(//Volumes/development/github/tuxpeople/ansible-sky/**)",
       "WebSearch",
       "WebFetch(domain:min.io)",
-      "WebFetch(domain:docs.min.io)"
+      "WebFetch(domain:docs.min.io)",
+      "Bash(find:*)",
+      "Bash(git -C /Volumes/development/github/tuxpeople/dotfiles show 5c113e4 --stat)"
     ],
     "deny": [],
     "ask": []
