@@ -12,7 +12,7 @@ else
 fi
 
 # Add `~/bin`, my iCloud Drive bin and krew to the `$PATH`
-export PATH="$HOME/bin:$HOME/iCloudDrive/Allgemein/bin/:${HOME}/.krew/bin:$PATH"
+export PATH="$HOME/bin:$HOME/iCloudDrive/Allgemein/bin/:${HOME}/.krew/bin:$PATH:${HOME}/.local/bin"
 
 # # Add python dir to the path
 # if [ -f /usr/local/bin/python3 ]; then
