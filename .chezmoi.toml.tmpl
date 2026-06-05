@@ -1,0 +1,7 @@
+sourceDir = {{ .chezmoi.sourceDir | quote }}
+
+[onepassword]
+    command = "op"
+
+[data]
+    is_business = {{ if or (eq .chezmoi.hostname "UMB-L3VWMGM77F") (eq .chezmoi.hostname "UMB-HQRC4M4WK2") }}true{{ else }}false{{ end }}
