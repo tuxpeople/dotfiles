@@ -1,0 +1,49 @@
+{
+    "telemetry.telemetryLevel": "off",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "yaml.customTags": [
+        "!encrypted/pkcs1-oaep scalar",
+        "!vault scalar"
+    ],
+    "redhat.telemetry.enabled": true,
+    "ansibleVault.keyfile": "~/Library/Mobile Documents/com~apple~CloudDocs/Dateien/Allgemein/bin/vault_password_file",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "kubeseal.executablePath": "{{ if eq .chezmoi.arch "arm64" }}/opt/homebrew{{ else }}/usr/local{{ end }}/bin/kubeseal",
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "stash-push:command",
+        "switch:command",
+        "push:command"
+    ],
+    "terraform.languageServer": {
+        "external": true,
+        "pathToBinary": "{{ if eq .chezmoi.arch "arm64" }}/opt/homebrew{{ else }}/usr/local{{ end }}/bin/terraform-ls",
+        "args": [
+            "serve"
+        ],
+        "maxNumberOfProblems": 100,
+        "trace.server": "off"
+    },
+    "sops.configPath": "./.sops.yaml",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "git.ignoreRebaseWarning": true,
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/instrumenta/kubernetes-json-schema/master/v1.18.0-standalone-strict/all.json": "kubernetes/**/*.yaml",
+        "https://raw.githubusercontent.com/fluxcd/helm-controller/main/docs/api/v2beta1/helmrelease.json": "kubernetes/**/helmrelease.yaml",
+        "https://raw.githubusercontent.com/fluxcd/source-controller/main/docs/api/v1beta2/helmrepository.json": "kubernetes/**/helmrepository.yaml",
+        "https://raw.githubusercontent.com/bjw-s/helm-charts/main/charts/other/app-template/values.schema.json": "kubernetes/**/values.yaml",
+        "kubernetes": "kubernetes/**/*.yaml"
+    },
+    "terminal.integrated.mouseWheelScrollSensitivity": 3,
+    "dev.containers.dockerPath": "podman",
+    "docker.extension.enableComposeLanguageServer": false
+}
