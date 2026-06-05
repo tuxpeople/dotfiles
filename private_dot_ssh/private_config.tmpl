@@ -1,0 +1,104 @@
+Include {{ .chezmoi.homeDir }}/.colima/ssh_config
+
+Include ~/.ssh/config.d/*
+Include ~/.lima/*/ssh.config
+
+#####################################################
+#                                  General settings #
+#####################################################
+Host *
+UseKeychain yes
+AddKeysToAgent yes
+Compression yes
+FallBackToRsh no
+KeepAlive yes
+GSSAPIDelegateCredentials yes
+GSSAPIAuthentication yes
+IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+IdentityFile none
+HostKeyAlgorithms -ssh-rsa
+PubkeyAcceptedKeyTypes -ssh-rsa
+
+Host *.cloudapp.azure.com
+    IdentityFile ~/.ssh/id_rsa_azure.pub
+    # Key provided by 1Password SSH Agent
+
+host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_github.pub
+    # Key provided by 1Password SSH Agent
+
+host gitlab.com
+    HostName gitlab.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_github.pub
+    # Key provided by 1Password SSH Agent
+{{ if .is_business }}
+#####################################################
+#                                          Business #
+#####################################################
+host gitlab-umb
+    HostName gitlab.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_gitlab_umb.pub
+    # Key provided by 1Password SSH Agent
+{{ end }}
+{{- if not .is_business }}
+#####################################################
+#                                            Privat #
+#####################################################
+# Router
+Host 10.20.30.1
+    HostKeyAlgorithms +ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
+
+# NAS
+Host nas
+  HostName 10.20.30.40
+  User admin
+  ForwardAgent yes
+  ProxyJump asgard
+
+#####################################################
+#                                               LAB #
+#####################################################
+Host turingpi
+    HostName turingpi
+    User root
+    IdentityAgent none
+    IdentitiesOnly yes
+    # Password authentication (no SSH key)
+
+#####################################################
+#                                     LAB Vockinger #
+#####################################################
+Host alma-bastion-jump
+    HostName nextcloud.vockinger.ch
+    ProxyJump 10.20.30.1
+    User tdeutsch
+    # Using 1Password SSH Agent (id_rsa)
+    Port 122
+    ForwardAgent yes
+
+Host alma-bastion
+    HostName nextcloud.vockinger.ch
+    User tdeutsch
+    Port 122
+    # Using 1Password SSH Agent (id_rsa)
+    ForwardAgent yes
+
+#####################################################
+#                                        Jump Hosts #
+#####################################################
+
+### Backdoor
+Host backdoor
+    HostName vpn.eighty-three.me
+    User t
+    IdentityFile ~/.ssh/id_rsa_t.pub
+    # Key provided by 1Password SSH Agent
+    ForwardAgent yes
+    ForwardX11 yes
+    Port 9090
+{{ end -}}
