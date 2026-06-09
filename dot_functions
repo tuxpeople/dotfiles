@@ -266,11 +266,11 @@ podman() {
 # ---- Ende Wrapper ----
 
 
-# ---- Docker Wrapper für Lima auf macOS ----
+# ---- Docker Wrapper für Colima auf macOS ----
 # Optional konfigurierbar (via Umgebungsvariablen)
-# LIMA_INSTANCE (Standard: docker)
-# LIMA_SOCKET (Standard: $HOME/.lima/<instance>/sock/docker.sock)
-# LIMA_TIMEOUT (Sekunden, Standard: 90)
+# COLIMA_PROFILE (Standard: default)
+# COLIMA_SOCKET (Standard: $HOME/.colima/<profile>/docker.sock)
+# COLIMA_TIMEOUT (Sekunden, Standard: 90)
 
 docker() {
   # Erster Versuch: echten docker-Binary-Aufruf
@@ -282,19 +282,19 @@ docker() {
   fi
   local status=$?
 
-  # Nur bei Verbindungsfehlern automatisch Lima starten
+  # Nur bei Verbindungsfehlern automatisch Colima starten
   if grep -qiE \
     '(cannot connect to the docker daemon|is the docker daemon running|error during connect|dial unix .+docker\.sock: connect: (connection refused|no such file or directory))' \
     "$errfile"; then
     rm -f "$errfile"
 
-    local inst="${LIMA_INSTANCE:-docker}"
-    local sock="${LIMA_SOCKET:-$HOME/.lima/${inst}/sock/docker.sock}"
-    local timeout="${LIMA_TIMEOUT:-90}"
+    local profile="${COLIMA_PROFILE:-default}"
+    local sock="${COLIMA_SOCKET:-$HOME/.colima/${profile}/docker.sock}"
+    local timeout="${COLIMA_TIMEOUT:-90}"
 
-    echo "docker: Daemon nicht erreichbar. Starte Lima-Instanz '${inst}'..." >&2
-    if ! command limactl start "$inst" >/dev/null 2>&1; then
-      echo "docker: Konnte Lima-Instanz '${inst}' nicht starten." >&2
+    echo "docker: Daemon nicht erreichbar. Starte Colima-Profil '${profile}'..." >&2
+    if ! command colima start "$profile" >/dev/null 2>&1; then
+      echo "docker: Konnte Colima-Profil '${profile}' nicht starten." >&2
       return $status
     fi
 
