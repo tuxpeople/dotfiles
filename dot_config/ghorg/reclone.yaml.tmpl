@@ -1,0 +1,14 @@
+github:
+  cmd: "ghorg clone tuxpeople --config {{ .chezmoi.homeDir }}/.config/ghorg/conf.yaml"
+{{ if .is_business }}
+gitlab-umb.tdeutsch:
+  cmd: "ghorg clone umb.tdeutsch --config {{ .chezmoi.homeDir }}/.config/ghorg/gitlab-umb.yaml"
+
+gitlab-team-nix:
+  cmd: "ghorg clone umbag/teams/nix --config {{ .chezmoi.homeDir }}/.config/ghorg/gitlab-umb.yaml --clone-type=org"
+{{ end }}
+gitlab-privat-tdeutsch:
+  cmd: "ghorg clone tdeutsch --config {{ .chezmoi.homeDir }}/.config/ghorg/gitlab-privat.yaml"
+
+gitlab-privat-tuxpeople:
+  cmd: "ghorg clone tuxpeople --config {{ .chezmoi.homeDir }}/.config/ghorg/gitlab-privat.yaml --clone-type=org"
