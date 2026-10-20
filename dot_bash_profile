@@ -1,6 +1,7 @@
 export GPG_TTY=$(tty)
 export HASTE_SERVER=https://paste.eighty-three.me
 export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
+export BAO_ADDR=https://openbao.lab.tdeutsch.ch
 
 #export GITHUB_TOKEN=$(op read op://Private/mwh2l5r44jahhh53gb6i4d4kbe/personal_token_with_repo)
 
@@ -28,9 +29,6 @@ export PATH="$HOME/bin:$HOME/iCloudDrive/Allgemein/bin/:${HOME}/.krew/bin:$PATH:
 # export PATH="$(${MYPYTHON} -m site --user-base)/bin:$PATH"
 
 eval "$(direnv hook bash)"
-
-# Initialize mise (Homebrew installation)
-eval "$(mise activate bash)"
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -112,3 +110,7 @@ fi
 
 # 1Password SSH agent — required for devcontainer SSH agent forwarding
 export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+# Initialize mise (Homebrew installation). Must stay last so mise-managed
+# tools win over pyenv shims and anything else that prepends to PATH.
+eval "$(mise activate bash)"
