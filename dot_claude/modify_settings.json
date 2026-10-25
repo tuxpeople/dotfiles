@@ -1,0 +1,41 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- /*
+  Merges only the secret-protection entries into ~/.claude/settings.json and
+  leaves everything else (written by Claude Code itself, e.g. via /config) alone.
+*/ -}}
+{{- $s := dict -}}
+{{- $changed := false -}}
+{{- if .chezmoi.stdin | trim -}}
+{{-   $s = fromJson .chezmoi.stdin -}}
+{{- end -}}
+
+{{- /* Deny reading the SOPS age key */ -}}
+{{- $rule := "Read(~/.config/sops/**)" -}}
+{{- $perms := get $s "permissions" | default (dict) -}}
+{{- $deny := get $perms "deny" | default (list) -}}
+{{- if not (has $rule $deny) -}}
+{{-   $s = setValueAtPath "permissions.deny" (append $deny $rule) $s -}}
+{{-   $changed = true -}}
+{{- end -}}
+
+{{- /* PreToolUse hook that blocks commands printing decrypted secrets */ -}}
+{{- $cmd := "~/.claude/hooks/block-secret-output.sh" -}}
+{{- $hooks := get $s "hooks" | default (dict) -}}
+{{- $pre := get $hooks "PreToolUse" | default (list) -}}
+{{- $found := false -}}
+{{- range $pre -}}
+{{-   range (get . "hooks" | default (list)) -}}
+{{-     if eq (get . "command" | toString) $cmd -}}{{- $found = true -}}{{- end -}}
+{{-   end -}}
+{{- end -}}
+{{- if not $found -}}
+{{-   $entry := dict "matcher" "Bash" "hooks" (list (dict "type" "command" "command" $cmd "onFailure" "block")) -}}
+{{-   $s = setValueAtPath "hooks.PreToolUse" (append $pre $entry) $s -}}
+{{-   $changed = true -}}
+{{- end -}}
+{{- /* Untouched input stays byte-identical, so chezmoi diff stays quiet */ -}}
+{{- if $changed -}}
+{{ toPrettyJson "  " $s | trim }}
+{{ else -}}
+{{ .chezmoi.stdin }}
+{{- end -}}
