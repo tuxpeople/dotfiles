@@ -1,5 +1,24 @@
 #!/usr/bin/env bash
 
+# https://chatgpt.com/c/6ae5f5df-e954-83ed-bdd0-6ce9aea15a92
+git-fetch-repos () {
+  local repo
+  for repo in */; do
+    [[ -e "$repo/.git" ]] || continue
+    git -C "$repo" fetch --all --prune
+  done
+}
+
+# https://chatgpt.com/c/6ae5f5df-e954-83ed-bdd0-6ce9aea15a92
+git-compare-repos-with-remote () {
+  local repo
+  for repo in */; do
+    [[ -e "$repo/.git" ]] || continue
+    echo "=== $repo ==="
+    git -C "$repo" status -sb
+  done
+}
+
 mergepr() {
   local ids
   ids=$(command gh pr list 2>/dev/null | grep -E "feat|fix|chore|github-action|deps|container|mise" | awk '{print $1}')
